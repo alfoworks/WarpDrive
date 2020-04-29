@@ -151,6 +151,7 @@ public class WarpDriveConfig {
 	public static boolean              isOpenComputersLoaded = false;
 	public static boolean              isThermalExpansionLoaded = false;
 	public static boolean              isThermalFoundationLoaded = false;
+	public static boolean              isMatterOverdriveLoaded = false;
 	
 	public static ItemStack            IC2_compressedAir;
 	public static ItemStack            IC2_emptyCell;
@@ -772,6 +773,8 @@ public class WarpDriveConfig {
 		isNotEnoughItemsLoaded = Loader.isModLoaded("NotEnoughItems");
 		isThermalExpansionLoaded = Loader.isModLoaded("thermalexpansion");
 		isThermalFoundationLoaded = Loader.isModLoaded("thermalfoundation");
+		
+		isMatterOverdriveLoaded = Loader.isModLoaded("matteroverdrive");
 	}
 	
 	public static void loadConfig(final File file) {
