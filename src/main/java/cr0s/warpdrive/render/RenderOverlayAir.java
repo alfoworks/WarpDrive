@@ -1,6 +1,6 @@
 package cr0s.warpdrive.render;
 
-import cr0s.warpdrive.AndroidCheck;
+import cr0s.warpdrive.compat.CompatMatterOverdrive;
 import cr0s.warpdrive.BreathingManager;
 import cr0s.warpdrive.api.ExceptionChunkNotLoaded;
 import cr0s.warpdrive.block.breathing.BlockAirShield;
@@ -62,7 +62,7 @@ public class RenderOverlayAir {
 			return;
 		}
 		
-		if (WarpDriveConfig.isMatterOverdriveLoaded && AndroidCheck.isAndroid(entityPlayer)) {
+		if (WarpDriveConfig.isMatterOverdriveLoaded && CompatMatterOverdrive.isAndroid(entityPlayer)) {
 			return;
 		}
 		

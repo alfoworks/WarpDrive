@@ -1,6 +1,6 @@
 package cr0s.warpdrive.config;
 
-import cr0s.warpdrive.AndroidCheck;
+import cr0s.warpdrive.compat.CompatMatterOverdrive;
 import cr0s.warpdrive.WarpDrive;
 import cr0s.warpdrive.block.BlockAbstractBase;
 import cr0s.warpdrive.block.BlockAbstractContainer;
@@ -819,7 +819,7 @@ public class Dictionary {
 	
 	public static boolean isLivingWithoutAir(final Entity entity) {
 		if (WarpDriveConfig.isMatterOverdriveLoaded && entity instanceof EntityPlayer) {
-			return AndroidCheck.isAndroid((EntityPlayer) entity);
+			return CompatMatterOverdrive.isAndroid((EntityPlayer) entity);
 		}
 		
 		final ResourceLocation resourceLocation = EntityList.getKey(entity);
