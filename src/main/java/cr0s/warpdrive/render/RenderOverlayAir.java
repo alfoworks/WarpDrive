@@ -62,7 +62,8 @@ public class RenderOverlayAir {
 			return;
 		}
 		
-		if (WarpDriveConfig.isMatterOverdriveLoaded && CompatMatterOverdrive.isAndroid(entityPlayer)) return;
+		if (WarpDriveConfig.isMatterOverdriveLoaded
+		    && CompatMatterOverdrive.isAndroid(entityPlayer)) return;
 		
 		// get air stats
 		final int rangeToVoid = getRangeToVoid(entityPlayer, x, y, z);
