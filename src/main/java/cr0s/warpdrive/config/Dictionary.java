@@ -818,9 +818,7 @@ public class Dictionary {
 	}
 	
 	public static boolean isLivingWithoutAir(final Entity entity) {
-		if (WarpDriveConfig.isMatterOverdriveLoaded && entity instanceof EntityPlayer) {
-			return CompatMatterOverdrive.isAndroid((EntityPlayer) entity);
-		}
+		if (WarpDriveConfig.isMatterOverdriveLoaded && entity instanceof EntityPlayer) return CompatMatterOverdrive.isAndroid((EntityPlayer) entity);
 		
 		final ResourceLocation resourceLocation = EntityList.getKey(entity);
 		return ENTITIES_LIVING_WITHOUT_AIR.contains(resourceLocation);
