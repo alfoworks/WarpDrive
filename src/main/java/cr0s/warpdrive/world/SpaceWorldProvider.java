@@ -1,12 +1,14 @@
 package cr0s.warpdrive.world;
 
+import com.google.common.collect.ImmutableList;
 import cr0s.warpdrive.WarpDrive;
 import cr0s.warpdrive.data.CelestialObjectManager;
-import cr0s.warpdrive.data.GlobalRegionManager;
-
-import javax.annotation.Nonnull;
-
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.world.EnumAtmosphericGas;
+import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.Biome;
@@ -16,7 +18,10 @@ import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class SpaceWorldProvider extends AbstractWorldProvider {
+import javax.annotation.Nonnull;
+import java.util.List;
+
+public class SpaceWorldProvider extends AbstractWorldProvider implements IGalacticraftWorldProvider {
 	
 	public SpaceWorldProvider() {
 		super();
@@ -131,5 +136,105 @@ public class SpaceWorldProvider extends AbstractWorldProvider {
 	@Override
 	public boolean canDoRainSnowIce(@Nonnull final Chunk chunk) {
 		return false;
+	}
+
+	@Override
+	public float getGravity() {
+		return 0;
+	}
+
+	@Override
+	public float getArrowGravity() {
+		return 0;
+	}
+
+	@Override
+	public double getMeteorFrequency() {
+		return 0;
+	}
+
+	@Override
+	public double getFuelUsageMultiplier() {
+		return 0;
+	}
+
+	@Override
+	public boolean canSpaceshipTierPass(int i) {
+		return false;
+	}
+
+	@Override
+	public float getFallDamageModifier() {
+		return 0;
+	}
+
+	@Override
+	public boolean hasNoAtmosphere() {
+		return true;
+	}
+
+	@Override
+	public float getSoundVolReductionAmount() {
+		return 0;
+	}
+
+	@Override
+	public boolean hasBreathableAtmosphere() {
+		return false;
+	}
+
+	@Override
+	public boolean netherPortalsOperational() {
+		return false;
+	}
+
+	@Override
+	public boolean isGasPresent(EnumAtmosphericGas enumAtmosphericGas) {
+		return false;
+	}
+
+	@Override
+	public float getThermalLevelModifier() {
+		return 0;
+	}
+
+	@Override
+	public float getWindLevel() {
+		return 0;
+	}
+
+	@Override
+	public float getSolarSize() {
+		return 5.0F;
+	}
+
+	@Override
+	public CelestialBody getCelestialBody() {
+		return null;
+	}
+
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return false;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
+
+	@Override
+	public ResourceLocation getDungeonChestType() {
+		return null;
+	}
+
+	@Override
+	public List<Block> getSurfaceBlocks() {
+		return ImmutableList.of(Block.getBlockById(0));
 	}
 }
