@@ -1,5 +1,6 @@
 package cr0s.warpdrive.item;
 
+import cr0s.warpdrive.Commons;
 import cr0s.warpdrive.WarpDrive;
 import cr0s.warpdrive.api.IBreathingHelmet;
 import cr0s.warpdrive.api.IItemBase;
@@ -10,6 +11,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
@@ -17,9 +19,12 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
+import net.minecraft.world.World;
 import net.minecraftforge.common.IRarity;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import java.util.List;
 
 public class ItemWarpArmor extends ItemArmor implements IItemBase, IBreathingHelmet {
 	
@@ -76,5 +81,12 @@ public class ItemWarpArmor extends ItemArmor implements IItemBase, IBreathingHel
 	@Override
 	public boolean canBreath(final EntityLivingBase entityLivingBase) {
 		return armorType == EntityEquipmentSlot.HEAD;
+	}
+	
+	@Override
+	public void addInformation(ItemStack p_addInformation_1_, @Nullable World p_addInformation_2_, List<String> p_addInformation_3_, ITooltipFlag p_addInformation_4_) {
+		super.addInformation(p_addInformation_1_, p_addInformation_2_, p_addInformation_3_, p_addInformation_4_);
+		
+		Commons.addThisIsUselessTooltip(p_addInformation_3_);
 	}
 }

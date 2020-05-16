@@ -118,6 +118,9 @@ repositories {
     mavenLocal()
 }
 
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
 dependencies {
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
