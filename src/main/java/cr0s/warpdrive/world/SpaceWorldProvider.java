@@ -21,7 +21,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-public class SpaceWorldProvider extends AbstractWorldProvider implements IGalacticraftWorldProvider {
+public class SpaceWorldProvider extends AbstractWorldProvider {
 	
 	public SpaceWorldProvider() {
 		super();

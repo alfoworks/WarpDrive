@@ -21,7 +21,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-public class HyperSpaceWorldProvider extends AbstractWorldProvider implements IGalacticraftWorldProvider {
+public class HyperSpaceWorldProvider extends AbstractWorldProvider {
 	
 	public HyperSpaceWorldProvider() {
 		super();

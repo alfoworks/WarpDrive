@@ -8,6 +8,7 @@ import cr0s.warpdrive.render.RenderSpaceSky;
 
 import javax.annotation.Nonnull;
 
+import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
@@ -19,7 +20,7 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public abstract class AbstractWorldProvider extends WorldProvider {
+public abstract class AbstractWorldProvider extends WorldProvider implements IGalacticraftWorldProvider {
 	
 	protected CelestialObject celestialObjectDimension = null;
 	protected boolean isRemote;
