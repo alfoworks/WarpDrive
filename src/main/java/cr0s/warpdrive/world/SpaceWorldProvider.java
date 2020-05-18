@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
 import java.util.List;
 
 public class SpaceWorldProvider extends AbstractWorldProvider {
-	
+	private CelestialBody body;
 	public SpaceWorldProvider() {
 		super();
 		
@@ -35,6 +35,21 @@ public class SpaceWorldProvider extends AbstractWorldProvider {
 		super.init();
 		
 		world.setSeaLevel(0);
+		final int dimension = this.getDimension();
+		System.out.println("WARPDRIVE DIMENSION INFO");
+		System.out.println(dimension);
+		body = new CelestialBody("WarpDrive Space") {
+			@Override
+			public int getID() {
+				return dimension;
+			}
+
+			@Override
+			public String getUnlocalizedNamePrefix() {
+				return "WD";
+			}
+		};
+		body.setUnreachable();
 	}
 	
 	@Nonnull 
@@ -210,7 +225,8 @@ public class SpaceWorldProvider extends AbstractWorldProvider {
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return null;
+		// return null;
+		return body;
 	}
 
 	@Override

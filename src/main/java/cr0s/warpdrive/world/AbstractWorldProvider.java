@@ -5,9 +5,6 @@ import cr0s.warpdrive.data.CelestialObject;
 import cr0s.warpdrive.data.CelestialObjectManager;
 import cr0s.warpdrive.render.RenderBlank;
 import cr0s.warpdrive.render.RenderSpaceSky;
-
-import javax.annotation.Nonnull;
-
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,13 +12,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.WorldProvider;
-
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nonnull;
+
 public abstract class AbstractWorldProvider extends WorldProvider implements IGalacticraftWorldProvider {
-	
 	protected CelestialObject celestialObjectDimension = null;
 	protected boolean isRemote;
 	
