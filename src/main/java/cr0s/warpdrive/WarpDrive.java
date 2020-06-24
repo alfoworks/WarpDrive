@@ -98,17 +98,7 @@ import cr0s.warpdrive.block.weapon.TileEntityLaserCamera;
 import cr0s.warpdrive.block.weapon.TileEntityWeaponController;
 import cr0s.warpdrive.client.CreativeTabHull;
 import cr0s.warpdrive.client.CreativeTabMain;
-import cr0s.warpdrive.command.CommandDebug;
-import cr0s.warpdrive.command.CommandDump;
-import cr0s.warpdrive.command.CommandEntity;
-import cr0s.warpdrive.command.CommandFind;
-import cr0s.warpdrive.command.CommandGenerate;
-import cr0s.warpdrive.command.CommandBed;
-import cr0s.warpdrive.command.CommandInvisible;
-import cr0s.warpdrive.command.CommandNPC;
-import cr0s.warpdrive.command.CommandReload;
-import cr0s.warpdrive.command.CommandRender;
-import cr0s.warpdrive.command.CommandSpace;
+import cr0s.warpdrive.command.*;
 import cr0s.warpdrive.config.Recipes;
 import cr0s.warpdrive.config.WarpDriveConfig;
 import cr0s.warpdrive.damage.DamageAsphyxia;
@@ -149,6 +139,7 @@ import cr0s.warpdrive.item.ItemWarpArmor;
 import cr0s.warpdrive.item.ItemWrench;
 import cr0s.warpdrive.network.PacketHandler;
 import cr0s.warpdrive.render.EntityCamera;
+import cr0s.warpdrive.render.RenderSpaceSky;
 import cr0s.warpdrive.world.BiomeSpace;
 import cr0s.warpdrive.world.EntitySphereGen;
 import cr0s.warpdrive.world.EntityStarCore;
@@ -175,7 +166,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.Biome;
-
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.MinecraftForge;
@@ -617,7 +607,7 @@ public class WarpDrive {
 		
 		proxy.onForgePreInitialisation();
 	}
-	
+
 	@EventHandler
 	public void onFMLInitialization(final FMLInitializationEvent event) {
 		PacketHandler.init();
@@ -681,6 +671,7 @@ public class WarpDrive {
 		event.registerServerCommand(new CommandReload());
 		event.registerServerCommand(new CommandRender());
 		event.registerServerCommand(new CommandSpace());
+		event.registerServerCommand(new A());
 	}
 	
 	/* DataFixer documentation/feature on limbo => use midas configuration instead
