@@ -671,7 +671,6 @@ public class WarpDrive {
 		event.registerServerCommand(new CommandReload());
 		event.registerServerCommand(new CommandRender());
 		event.registerServerCommand(new CommandSpace());
-		event.registerServerCommand(new A());
 	}
 	
 	/* DataFixer documentation/feature on limbo => use midas configuration instead

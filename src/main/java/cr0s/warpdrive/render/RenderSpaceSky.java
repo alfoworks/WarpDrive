@@ -13,6 +13,7 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Random;
 
+import cr0s.warpdrive.render.skybox.ISkyBoxRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.*;
@@ -39,43 +40,7 @@ public class RenderSpaceSky extends IRenderHandler {
     public static final int callListUpperSkyBox = callListStars + 1;
     public static final int callListBottomSkyBox = callListStars + 2;
 
-    public static ArrayList<Integer> crap = new ArrayList<>();
-
-    static {
-        // pre-generate skyboxes
-        final Tessellator tessellator = Tessellator.getInstance();
-        final BufferBuilder vertexBuffer = tessellator.getBuffer();
-
-        GlStateManager.glNewList(callListUpperSkyBox, GL11.GL_COMPILE);
-        final int stepSize = 64;
-        final int nbSteps = 256 / stepSize + 2;
-        float y = 16F;
-        for (int x = -stepSize * nbSteps; x <= stepSize * nbSteps; x += stepSize) {
-            for (int z = -stepSize * nbSteps; z <= stepSize * nbSteps; z += stepSize) {
-                vertexBuffer.begin(7, DefaultVertexFormats.POSITION_COLOR);
-                vertexBuffer.pos(x, y, z).color(0.0F, 0.0F, 0.0F, 1.0F).endVertex();
-                vertexBuffer.pos(x + stepSize, y, z).color(0.0F, 0.0F, 0.0F, 1.0F).endVertex();
-                vertexBuffer.pos(x + stepSize, y, z + stepSize).color(0.0F, 0.0F, 0.0F, 1.0F).endVertex();
-                vertexBuffer.pos(x, y, z + stepSize).color(0.0F, 0.0F, 0.0F, 1.0F).endVertex();
-                tessellator.draw();
-            }
-        }
-        GlStateManager.glEndList();
-
-        GlStateManager.glNewList(callListBottomSkyBox, GL11.GL_COMPILE);
-        y = -16F;
-        vertexBuffer.begin(7, DefaultVertexFormats.POSITION_COLOR);
-        for (int x = -stepSize * nbSteps; x <= stepSize * nbSteps; x += stepSize) {
-            for (int z = -stepSize * nbSteps; z <= stepSize * nbSteps; z += stepSize) {
-                vertexBuffer.pos(x + stepSize, y, z).color(0.30F, 0.30F, 0.30F, 1.00F).endVertex();
-                vertexBuffer.pos(x, y, z).color(0.30F, 0.30F, 0.30F, 1.00F).endVertex();
-                vertexBuffer.pos(x, y, z + stepSize).color(0.30F, 0.30F, 0.30F, 1.00F).endVertex();
-                vertexBuffer.pos(x + stepSize, y, z + stepSize).color(0.30F, 0.30F, 0.30F, 1.00F).endVertex();
-            }
-        }
-        tessellator.draw();
-        GlStateManager.glEndList();
-    }
+    public static ISkyBoxRenderer skyRenderer;
 
     public static RenderSpaceSky getInstance() {
         if (INSTANCE == null) {
@@ -84,58 +49,16 @@ public class RenderSpaceSky extends IRenderHandler {
         return INSTANCE;
     }
 
-    private void renderOneSide(int side, Minecraft mc) {
-        GlStateManager.disableFog();
-        GlStateManager.disableAlpha();
-        GlStateManager.enableBlend();
-        GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
-        RenderHelper.disableStandardItemLighting();
-        GlStateManager.depthMask(false);
-        mc.renderEngine.bindTexture(new ResourceLocation("warpdrive", String.format("textures/alfosky/%s.png", side)));
-        Tessellator tessellator = Tessellator.getInstance();
-        BufferBuilder bufferbuilder = tessellator.getBuffer();
-
-        GlStateManager.pushMatrix();
-
-        if (side == 1) {
-            GlStateManager.rotate(90.0F, 1.0F, 0.0F, 0.0F);
-        }
-
-        if (side == 2) {
-            GlStateManager.rotate(-90.0F, 1.0F, 0.0F, 0.0F);
-        }
-
-        if (side == 3) {
-            GlStateManager.rotate(180.0F, 1.0F, 0.0F, 0.0F);
-        }
-
-        if (side == 4) {
-            GlStateManager.rotate(90.0F, 0.0F, 0.0F, 1.0F);
-        }
-
-        if (side == 5) {
-            GlStateManager.rotate(-90.0F, 0.0F, 0.0F, 1.0F);
-        }
-
-        bufferbuilder.begin(7, DefaultVertexFormats.POSITION_TEX_COLOR);
-        bufferbuilder.pos(-100.0D, -100.0D, -100.0D).tex(0.0D, 0.0D).color(255, 255, 255, 255).endVertex();
-        bufferbuilder.pos(-100.0D, -100.0D, 100.0D).tex(0.0D, 1).color(255, 255, 255, 255).endVertex();
-        bufferbuilder.pos(100.0D, -100.0D, 100.0D).tex(1, 1).color(255, 255, 255, 255).endVertex();
-        bufferbuilder.pos(100.0D, -100.0D, -100.0D).tex(1, 0.0D).color(255, 255, 255, 255).endVertex();
-        tessellator.draw();
-        GlStateManager.popMatrix();
-
-        GlStateManager.depthMask(true);
-        GlStateManager.enableTexture2D();
-        GlStateManager.enableAlpha();
-    }
-
     @Override
     public void render(final float partialTicks, final WorldClient world, final Minecraft mc) {
-        for (int i = 0; i < 6; i++) {
-            if (crap.contains(i)) continue;
-            renderOneSide(i, mc);
-        }
+        final Vec3d vec3Player = mc.player.getPositionEyes(partialTicks);
+        final CelestialObject celestialObject = world.provider == null ? null
+                : CelestialObjectManager.get(world, (int) vec3Player.x, (int) vec3Player.z);
+
+        final Tessellator tessellator = Tessellator.getInstance();
+        // final BufferBuilder vertexBuffer = tessellator.getBuffer();
+
+        skyRenderer.render(tessellator, mc,255.0F);
     }
 
     static final double PLANET_FAR = 1786.0D;
