@@ -7,6 +7,7 @@ import cr0s.warpdrive.data.CelestialObject;
 import cr0s.warpdrive.data.CelestialObject.RenderData;
 import cr0s.warpdrive.data.GlobalRegionManager;
 import cr0s.warpdrive.data.Vector3;
+import cr0s.warpdrive.render.skybox.*;
 
 import javax.annotation.Nonnull;
 import java.awt.Color;
@@ -38,6 +39,8 @@ public class RenderSpaceSky extends IRenderHandler {
 	
 	public static final int callListUpperSkyBox = callListStars + 1;
 	public static final int callListBottomSkyBox = callListStars + 2;
+
+	public static ISkyBoxRenderer skyRenderer;
 	
 	static {
 		// pre-generate skyboxes
