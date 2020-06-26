@@ -265,6 +265,7 @@ public class WarpDriveConfig {
 	public static boolean LOGGING_ENTITY_FX = false;
 	public static boolean LOGGING_CLIENT_SYNCHRONIZATION = false;
 	public static boolean LOGGING_GRAVITY = false;
+	public static boolean LOGGING_OFFLINE_AVATAR = true;
 	
 	// Energy
 	public static String           ENERGY_DISPLAY_UNITS = "RF";
@@ -305,6 +306,12 @@ public class WarpDriveConfig {
 	public static int              BIOMETRIC_SCANNER_DURATION_TICKS = 100;
 	public static int              BIOMETRIC_SCANNER_RANGE_BLOCKS = 3;
 	
+	// Camera
+	public static int              CAMERA_IMAGE_RECOGNITION_INTERVAL_TICKS = 20;
+	public static int              CAMERA_RANGE_BASE_BLOCKS = 0;
+	public static int              CAMERA_RANGE_UPGRADE_BLOCKS = 8;
+	public static int              CAMERA_RANGE_UPGRADE_MAX_QUANTITY = 8;
+	
 	// Offline avatar
 	public static boolean          OFFLINE_AVATAR_ENABLE = true;
 	public static boolean          OFFLINE_AVATAR_CREATE_ONLY_ABOARD_SHIPS = true;
@@ -313,6 +320,8 @@ public class WarpDriveConfig {
 	public static boolean          OFFLINE_AVATAR_ALWAYS_RENDER_NAME_TAG = false;
 	public static float            OFFLINE_AVATAR_MIN_RANGE_FOR_REMOVAL = 1.0F;
 	public static float            OFFLINE_AVATAR_MAX_RANGE_FOR_REMOVAL = 5.0F;
+	public static int              OFFLINE_AVATAR_DELAY_FOR_REMOVAL_SECONDS = 1;
+	public static int              OFFLINE_AVATAR_DELAY_FOR_REMOVAL_TICKS = 20 * OFFLINE_AVATAR_DELAY_FOR_REMOVAL_SECONDS;
 	
 	// Radar
 	public static int              RADAR_MAX_ENERGY_STORED = 100000000; // 100kk eU
@@ -541,10 +550,11 @@ public class WarpDriveConfig {
 	public static float[]          ENAN_REACTOR_EXPLOSION_STRENGTH_MIN_BY_TIER = { 4.0F, 4.0F, 5.0F, 6.0F };
 	public static float[]          ENAN_REACTOR_EXPLOSION_STRENGTH_MAX_BY_TIER = { 7.0F, 7.0F, 9.0F, 11.0F };
 	
-	// Enantiomorphic power reactor
+	// Force field setup
 	public static int[]            FORCE_FIELD_PROJECTOR_MAX_ENERGY_STORED_BY_TIER = { 20000000, 30000, 90000, 150000 }; // 30000 * (1 + 2 * tier)
 	public static double           FORCE_FIELD_PROJECTOR_EXPLOSION_SCALE = 1000.0D;
 	public static double           FORCE_FIELD_PROJECTOR_MAX_LASER_REQUIRED = 10.0D;
+	public static double           FORCE_FIELD_EXPLOSION_STRENGTH_VANILLA_CAP = 15.0D;
 	
 	// Subspace capacitor
 	public static int[]            CAPACITOR_MAX_ENERGY_STORED_BY_TIER = { 20000000, 800000, 4000000, 20000000 };
@@ -980,6 +990,7 @@ public class WarpDriveConfig {
 		LOGGING_CHUNK_LOADING = config.get("logging", "enable_chunk_loading_logs", LOGGING_CHUNK_LOADING, "Chunk loading logs, enable it to report chunk loaders updates").getBoolean(false);
 		LOGGING_ENTITY_FX = config.get("logging", "enable_entity_fx_logs", LOGGING_ENTITY_FX, "EntityFX logs, enable it to dump entityFX registry updates").getBoolean(false);
 		LOGGING_GRAVITY = config.get("logging", "enable_gravity_logs", LOGGING_GRAVITY, "Gravity logs, enable it before reporting fall damage and related issues").getBoolean(false);
+		LOGGING_OFFLINE_AVATAR = config.get("logging", "enable_offline_avatar_logs", LOGGING_OFFLINE_AVATAR, "Offline avatar logs, enable it before reporting fall damage and related issues").getBoolean(true);
 		
 		// Energy handling
 		ENERGY_DISPLAY_UNITS = config.get("energy", "display_units", ENERGY_DISPLAY_UNITS, "display units for energy (EU, RF, FE, \u0230I)").getString();
@@ -1050,19 +1061,30 @@ public class WarpDriveConfig {
 		
 		// Offline avatar
 		OFFLINE_AVATAR_ENABLE =
-				config.get("offline_avatar", "enable", OFFLINE_AVATAR_ENABLE, "Enable creation of offline avatars to follow ship movements. This only disable creating new ones.").getBoolean(OFFLINE_AVATAR_ENABLE);
+				config.get("offline_avatar", "enable", OFFLINE_AVATAR_ENABLE,
+				           "Enable creation of offline avatars to follow ship movements. This only disable creating new ones.").getBoolean(OFFLINE_AVATAR_ENABLE);
 		OFFLINE_AVATAR_CREATE_ONLY_ABOARD_SHIPS =
-				config.get("offline_avatar", "create_only_aboard_ships", OFFLINE_AVATAR_CREATE_ONLY_ABOARD_SHIPS, "Only create an offline avatar when player disconnects while inside a ship. Disabling may cause lag in spawn areas...").getBoolean(OFFLINE_AVATAR_CREATE_ONLY_ABOARD_SHIPS);
+				config.get("offline_avatar", "create_only_aboard_ships", OFFLINE_AVATAR_CREATE_ONLY_ABOARD_SHIPS,
+				           "Only create an offline avatar when player disconnects while inside a ship. Disabling may cause lag in spawn areas...").getBoolean(OFFLINE_AVATAR_CREATE_ONLY_ABOARD_SHIPS);
 		OFFLINE_AVATAR_FORGET_ON_DEATH =
-				config.get("offline_avatar", "forget_on_death", OFFLINE_AVATAR_FORGET_ON_DEATH, "Enable to forget current avatar position when it's killed, or disable player teleportation to last known avatar's position").getBoolean(OFFLINE_AVATAR_FORGET_ON_DEATH);
+				config.get("offline_avatar", "forget_on_death", OFFLINE_AVATAR_FORGET_ON_DEATH,
+				           "Enable to forget current avatar position when it's killed, or disable player teleportation to last known avatar's position").getBoolean(OFFLINE_AVATAR_FORGET_ON_DEATH);
 		OFFLINE_AVATAR_MODEL_SCALE = (float) Commons.clamp(0.20D, 2.00D,
-				config.get("offline_avatar", "model_scale", OFFLINE_AVATAR_MODEL_SCALE, "Scale of offline avatar compared to a normal player").getDouble(OFFLINE_AVATAR_MODEL_SCALE));
+				config.get("offline_avatar", "model_scale", OFFLINE_AVATAR_MODEL_SCALE,
+				           "Scale of offline avatar compared to a normal player").getDouble(OFFLINE_AVATAR_MODEL_SCALE));
 		OFFLINE_AVATAR_ALWAYS_RENDER_NAME_TAG =
-				config.get("offline_avatar", "always_render_name_tag", OFFLINE_AVATAR_ALWAYS_RENDER_NAME_TAG, "Should avatar name tag always be visible?").getBoolean(OFFLINE_AVATAR_ALWAYS_RENDER_NAME_TAG);
+				config.get("offline_avatar", "always_render_name_tag", OFFLINE_AVATAR_ALWAYS_RENDER_NAME_TAG, 
+				           "Should avatar name tag always be visible?").getBoolean(OFFLINE_AVATAR_ALWAYS_RENDER_NAME_TAG);
 		OFFLINE_AVATAR_MIN_RANGE_FOR_REMOVAL = (float) Commons.clamp(0.10D, 10.00D,
-				config.get("offline_avatar", "min_range_for_removal", OFFLINE_AVATAR_MIN_RANGE_FOR_REMOVAL, "Minimum range between a player and their avatar to consider it for removal (i.e. ensuring connection was successful)").getDouble(OFFLINE_AVATAR_MIN_RANGE_FOR_REMOVAL));
+				config.get("offline_avatar", "min_range_for_removal", OFFLINE_AVATAR_MIN_RANGE_FOR_REMOVAL,
+				           "Minimum range between a player and their avatar to consider it for removal (i.e. ensuring connection was successful)").getDouble(OFFLINE_AVATAR_MIN_RANGE_FOR_REMOVAL));
 		OFFLINE_AVATAR_MAX_RANGE_FOR_REMOVAL = (float) Commons.clamp(Math.max(3.00D, OFFLINE_AVATAR_MIN_RANGE_FOR_REMOVAL), Float.MAX_VALUE,
-				config.get("offline_avatar", "max_range_for_removal", OFFLINE_AVATAR_MAX_RANGE_FOR_REMOVAL, "Maximum range between a player and his/her avatar to consider it for removal").getDouble(OFFLINE_AVATAR_MAX_RANGE_FOR_REMOVAL));
+				config.get("offline_avatar", "max_range_for_removal", OFFLINE_AVATAR_MAX_RANGE_FOR_REMOVAL,
+				           "Maximum range between a player and his/her avatar to consider it for removal").getDouble(OFFLINE_AVATAR_MAX_RANGE_FOR_REMOVAL));
+		OFFLINE_AVATAR_DELAY_FOR_REMOVAL_SECONDS = Commons.clamp(0, 300,
+		        config.get("offline_avatar", "delay_for_removal_s", OFFLINE_AVATAR_DELAY_FOR_REMOVAL_SECONDS,
+		                   "Delay before removing an avatar when their related player is in range (measured in seconds)").getInt());
+		OFFLINE_AVATAR_DELAY_FOR_REMOVAL_TICKS = OFFLINE_AVATAR_DELAY_FOR_REMOVAL_SECONDS * 20;
 		
 		// Radar
 		RADAR_MAX_ENERGY_STORED = Commons.clamp(0, Integer.MAX_VALUE,
@@ -1335,6 +1357,11 @@ public class WarpDriveConfig {
 		FORCE_FIELD_PROJECTOR_MAX_LASER_REQUIRED = Commons.clamp(1.0D, 1000.0D,
 				config.get("force_field", "projector_max_laser_required", FORCE_FIELD_PROJECTOR_MAX_LASER_REQUIRED,
 				           "Number of maxed out laser cannons required to break a superior force field.").getDouble(FORCE_FIELD_PROJECTOR_MAX_LASER_REQUIRED));
+		
+		FORCE_FIELD_EXPLOSION_STRENGTH_VANILLA_CAP = Commons.clamp(3.0D, 1000.0D,
+				config.get("force_field", "explosion_strength_vanilla_cap", FORCE_FIELD_EXPLOSION_STRENGTH_VANILLA_CAP,
+		                   "Maximum strength for vanilla explosion object used by simple explosives like TechGuns rockets.").getDouble(FORCE_FIELD_EXPLOSION_STRENGTH_VANILLA_CAP));
+		
 		
 		// Subspace capacitor
 		CAPACITOR_MAX_ENERGY_STORED_BY_TIER = config.get("capacitor", "max_energy_stored_by_tier", CAPACITOR_MAX_ENERGY_STORED_BY_TIER, "Maximum energy stored for each subspace capacitor tier").getIntList();

@@ -93,6 +93,10 @@ public abstract class TileEntityAbstractBase extends TileEntity implements IBloc
 	public void finishConstruction() {
 		if (!isConstructed) {
 			onConstructed();
+			if (Commons.throttleMe("finishConstruction")) {
+				new RuntimeException(String.format("%s Recovered from missing call to onConstructed",
+				                                   this )).printStackTrace(WarpDrive.printStreamWarn);
+			}
 		}
 	}
 	
@@ -277,6 +281,12 @@ public abstract class TileEntityAbstractBase extends TileEntity implements IBloc
 	
 	// tier
 	public int getTierIndex() {
+		if (!isConstructed) {
+			onConstructed();
+			WarpDrive.logger.error(String.format("%s Tile entity was used before being loaded! this is a forge issue.",
+			                                     this ));
+			new RuntimeException().printStackTrace(WarpDrive.printStreamError);
+		}
 		return enumTier.getIndex();
 	}
 	
@@ -435,6 +445,15 @@ public abstract class TileEntityAbstractBase extends TileEntity implements IBloc
 	
 	public String getStatusHeaderInPureText() {
 		return Commons.removeFormatting( getStatusHeader().getUnformattedText() );
+	}
+	
+	public String getInternalStatus() {
+		return String.format("%s\n"
+		                   + "NBT %s\n"
+		                   + "isConstructed %s isFirstTick %s isDirty %s",
+		                     this,
+		                     writeToNBT(new NBTTagCompound()),
+		                     isConstructed, isFirstTick, isDirty );
 	}
 	
 	// upgrade system

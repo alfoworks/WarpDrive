@@ -24,6 +24,8 @@ import net.minecraftforge.fml.common.Optional;
 
 public abstract class TileEntityAbstractMachine extends TileEntityAbstractInterfaced implements IMachine {
 	
+	private static final WarpDriveText VALIDITY_ISSUES_UNKNOWN = new WarpDriveText(Commons.getStyleWarning(), "unknown");
+	
 	// persistent properties
 	public String name = "";
 	protected boolean isEnabled = true;
@@ -32,7 +34,10 @@ public abstract class TileEntityAbstractMachine extends TileEntityAbstractInterf
 	private boolean isDirtyAssembly = true;
 	private int tickScanAssembly = 0;
 	protected boolean isAssemblyValid = true;
-	protected WarpDriveText textValidityIssues = new WarpDriveText(Commons.getStyleWarning(), "unknown"); 
+	protected WarpDriveText textValidityIssues = VALIDITY_ISSUES_UNKNOWN;
+	
+	private boolean isDirtyParameters = true;
+	private int tickUpdateParameters = 0;
 	
 	// allow only one computation at a time
 	protected static final AtomicBoolean isGlobalThreadRunning = new AtomicBoolean(false);
@@ -55,6 +60,7 @@ public abstract class TileEntityAbstractMachine extends TileEntityAbstractInterf
 	protected void onFirstUpdateTick() {
 		super.onFirstUpdateTick();
 		doScanAssembly(true);
+		doUpdateParameters(true);
 	}
 	
 	@Override
@@ -77,6 +83,20 @@ public abstract class TileEntityAbstractMachine extends TileEntityAbstractInterf
 			
 			doScanAssembly(isDirty);
 		}
+		
+		// update operational parameters when dirty or periodically to recover whatever may have desynchronized them
+		if (isDirtyParameters) {
+			tickUpdateParameters = 0;
+		}
+		tickUpdateParameters--;
+		if (tickUpdateParameters <= 0) {
+			tickUpdateParameters = WarpDriveConfig.G_PARAMETERS_UPDATE_INTERVAL_TICKS;
+			final boolean isDirty = isDirtyParameters;
+			isDirtyParameters = false;
+			
+			doUpdateParameters(isDirty);
+		}
+		
 	}
 	
 	public boolean isDirtyAssembly() {
@@ -105,6 +125,14 @@ public abstract class TileEntityAbstractMachine extends TileEntityAbstractInterf
 	
 	protected boolean doScanAssembly(final boolean isDirty, final WarpDriveText textReason) {
 		return true;
+	}
+	
+	protected void markDirtyParameters() {
+		isDirtyParameters = true;
+	}
+	
+	protected void doUpdateParameters(final boolean isDirty) {
+		// no operation
 	}
 	
 	@Override
@@ -146,7 +174,7 @@ public abstract class TileEntityAbstractMachine extends TileEntityAbstractInterf
 		super.readFromNBT(tagCompound);
 		
 		name = tagCompound.getString(ICoreSignature.NAME_TAG);
-		isEnabled = !tagCompound.hasKey("isEnabled") || tagCompound.getBoolean("isEnabled");
+		setIsEnabled( !tagCompound.hasKey("isEnabled") || tagCompound.getBoolean("isEnabled"));
 	}
 	
 	@Nonnull
@@ -200,9 +228,12 @@ public abstract class TileEntityAbstractMachine extends TileEntityAbstractInterf
 	}
 	
 	public void setIsEnabled(final boolean isEnabled) {
+		final boolean isEnabledOld = this.isEnabled;
 		this.isEnabled = isEnabled;
 		// force update through main thread since CC & OC are running outside the main thread
-		markDirty();
+		if (isEnabledOld != isEnabled) {
+			markDirty();
+		}
 	}
 	
 	// Common OC/CC methods

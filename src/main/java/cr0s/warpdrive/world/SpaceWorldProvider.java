@@ -3,6 +3,9 @@ package cr0s.warpdrive.world;
 import com.google.common.collect.ImmutableList;
 import cr0s.warpdrive.WarpDrive;
 import cr0s.warpdrive.data.CelestialObjectManager;
+
+import javax.annotation.Nonnull;
+
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.world.EnumAtmosphericGas;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;

@@ -62,11 +62,12 @@ public class TileEntitySpeaker extends TileEntityAbstractMachine {
 		  && rateMessaging + 1.0F < WarpDriveConfig.SPEAKER_RATE_MAX_MESSAGES ) {
 			final String messageRaw = messagesToSpeak.remove();
 			final ITextComponent messageFormatted = new WarpDriveText(null, messageRaw);
-			final List<EntityPlayerMP> playersInRange = world.getEntitiesWithinAABB(EntityPlayerMP.class, aabbRange, entityPlayerMP -> entityPlayerMP != null
-			                                                                                                                        && entityPlayerMP.isEntityAlive()
-			                                                                                                                        && !entityPlayerMP.isSpectator() );
+			final List<EntityPlayerMP> playersInRange = world.getEntitiesWithinAABB(EntityPlayerMP.class, aabbRange,
+			                                                                        entityPlayerMP -> entityPlayerMP != null
+			                                                                                       && entityPlayerMP.isEntityAlive()
+			                                                                                       && !entityPlayerMP.isSpectator() );
 			for (final EntityPlayerMP entityPlayerMP : playersInRange) {
-				entityPlayerMP.sendMessage(messageFormatted);
+				Commons.addChatMessage(entityPlayerMP, messageFormatted);
 			}
 			rateMessaging++;
 		}
