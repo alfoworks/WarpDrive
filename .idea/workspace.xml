@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/MC1.10" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ee20afcf-8444-4e1e-93fd-443b4907bf00" name="Default Changelist" comment="[ANY] Не поможет с дыханием - ревертнуть нахер" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1c2dwhKOPGLyn6nbJeUFARUzyKq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/GalacticraftCore/1.12.2-4.0.2.244/edb08ed0110c1713b429bf1b0f1f66bd196a42b4/GalacticraftCore-1.12.2-4.0.2.244-sources.jar!/" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.Minecraft Client">
+    <configuration name="Minecraft Client" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="GradleStart" />
+      <module name="WarpDrive.main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Minecraft Server" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="GradleStartServer" />
+      <module name="WarpDrive.main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Minecraft Client" />
+      <item itemvalue="Application.Minecraft Server" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee20afcf-8444-4e1e-93fd-443b4907bf00" name="Default Changelist" comment="" />
+      <created>1589730865324</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589730865324</updated>
+      <workItem from="1589730891827" duration="4920000" />
+      <workItem from="1589736774274" duration="1197000" />
+      <workItem from="1589805465565" duration="5062000" />
+    </task>
+    <task id="LOCAL-00001" summary="Revert &quot;[FIX] Typo&quot;&#10;&#10;This reverts commit 0b9cdd38">
+      <created>1589733845141</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589733845141</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[ANY]">
+      <created>1589744728191</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589744728191</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[ANY] Не поможет с дыханием - ревертнуть нахер">
+      <created>1589810581179</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589810581179</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/MC1.10" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/alfo-mine-edition" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Revert &quot;[FIX] Typo&quot;&#10;&#10;This reverts commit 0b9cdd38" />
+    <MESSAGE value="[ANY]" />
+    <MESSAGE value="[ANY] Не поможет с дыханием - ревертнуть нахер" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ANY] Не поможет с дыханием - ревертнуть нахер" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="473" y="44" key="#Minecraft_Client" timestamp="1589741974368">
+      <screen x="0" y="0" width="1600" height="862" />
+    </state>
+    <state x="473" y="44" key="#Minecraft_Client/0.0.1600.862@0.0.1600.862" timestamp="1589741974368" />
+    <state x="258" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589741986462">
+      <screen x="0" y="0" width="1600" height="862" />
+    </state>
+    <state x="258" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.862@0.0.1600.862" timestamp="1589741986462" />
+    <state x="399" y="0" key="CommitChangelistDialog2" timestamp="1589733844472">
+      <screen x="0" y="0" width="1600" height="862" />
+    </state>
+    <state x="399" y="0" key="CommitChangelistDialog2/0.0.1600.862@0.0.1600.862" timestamp="1589733844472" />
+    <state x="580" y="327" key="DetectedRootsChooserDialog" timestamp="1589807468872">
+      <screen x="0" y="0" width="1600" height="862" />
+    </state>
+    <state x="580" y="327" key="DetectedRootsChooserDialog/0.0.1600.862@0.0.1600.862" timestamp="1589807468872" />
+    <state x="100" y="100" width="1400" height="662" key="DiffContextDialog" timestamp="1589807616503">
+      <screen x="0" y="0" width="1600" height="862" />
+    </state>
+    <state x="100" y="100" width="1400" height="662" key="DiffContextDialog/0.0.1600.862@0.0.1600.862" timestamp="1589807616503" />
+    <state x="578" y="173" key="FileChooserDialogImpl" timestamp="1589807767996">
+      <screen x="0" y="0" width="1600" height="862" />
+    </state>
+    <state x="578" y="173" key="FileChooserDialogImpl/0.0.1600.862@0.0.1600.862" timestamp="1589807767996" />
+    <state width="1554" height="215" key="GridCell.Tab.0.bottom" timestamp="1589809937651">
+      <screen x="0" y="0" width="1600" height="862" />
+    </state>
+    <state width="1554" height="215" key="GridCell.Tab.0.bottom/0.0.1600.862@0.0.1600.862" timestamp="1589809937651" />
+    <state width="1554" height="215" key="GridCell.Tab.0.center" timestamp="1589809937651">
+      <screen x="0" y="0" width="1600" height="862" />
+    </state>
+    <state width="1554" height="215" key="GridCell.Tab.0.center/0.0.1600.862@0.0.1600.862" timestamp="1589809937651" />
+    <state width="1554" height="215" key="GridCell.Tab.0.left" timestamp="1589809937651">
+      <screen x="0" y="0" width="1600" height="862" />
+    </state>
+    <state width="1554" height="215" key="GridCell.Tab.0.left/0.0.1600.862@0.0.1600.862" timestamp="1589809937651" />
+    <state width="1554" height="215" key="GridCell.Tab.0.right" timestamp="1589809937651">
+      <screen x="0" y="0" width="1600" height="862" />
+    </state>
+    <state width="1554" height="215" key="GridCell.Tab.0.right/0.0.1600.862@0.0.1600.862" timestamp="1589809937651" />
+    <state x="284" y="9" key="SettingsEditor" timestamp="1589807648018">
+      <screen x="0" y="0" width="1600" height="862" />
+    </state>
+    <state x="284" y="9" key="SettingsEditor/0.0.1600.862@0.0.1600.862" timestamp="1589807648018" />
+    <state x="396" y="153" key="Vcs.Push.Dialog.v2" timestamp="1589810661590">
+      <screen x="0" y="0" width="1600" height="862" />
+    </state>
+    <state x="396" y="153" key="Vcs.Push.Dialog.v2/0.0.1600.862@0.0.1600.862" timestamp="1589810661590" />
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1589733186757">
+      <screen x="0" y="0" width="1600" height="862" />
+    </state>
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.862@0.0.1600.862" timestamp="1589733186757" />
+  </component>
+</project>
