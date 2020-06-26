@@ -90,103 +90,25 @@ public class RenderSpaceSky extends IRenderHandler {
 		final Vec3d vec3Player = mc.player.getPositionEyes(partialTicks);
 		final CelestialObject celestialObject = world.provider == null ? null
 				: CelestialObjectManager.get(world, (int) vec3Player.x, (int) vec3Player.z);
-		
+
 		final Tessellator tessellator = Tessellator.getInstance();
-		// final BufferBuilder vertexBuffer = tessellator.getBuffer();
-		
+
 		GlStateManager.disableTexture2D();
 		GlStateManager.depthMask(false);
-		
-		// draw upper skybox
-		/*
-		final Vec3d skyColor = getCustomSkyColor();
-		float skyColorRed   = (float) skyColor.x * (1 - world.getStarBrightness(partialTicks) * 2);
-		float skyColorGreen = (float) skyColor.y * (1 - world.getStarBrightness(partialTicks) * 2);
-		float skyColorBlue  = (float) skyColor.z * (1 - world.getStarBrightness(partialTicks) * 2);
-		float var8;
 
-		if (mc.gameSettings.anaglyph) {
-			final float var6 = (skyColorRed * 30.0F + skyColorGreen * 59.0F + skyColorBlue * 11.0F) / 100.0F;
-			final float var7 = (skyColorRed * 30.0F + skyColorGreen * 70.0F) / 100.0F;
-			var8 = (skyColorRed * 30.0F + skyColorBlue * 70.0F) / 100.0F;
-			skyColorRed = var6;
-			skyColorGreen = var7;
-			skyColorBlue = var8;
-		}
-		
-		// GlStateManager.enableFog();
-		GlStateManager.callList(callListUpperSkyBox);
-		// GlStateManager.disableFog();
-		/**/
-		
-		// compute global alpha
-		final float alphaBase = 1.0F; // - world.getRainStrength(partialTicks);
-		
 		// draw stars
 		GlStateManager.enableBlend();
 		GlStateManager.blendFunc(SourceFactor.SRC_ALPHA, DestFactor.ONE);
 		GlStateManager.disableAlpha();
-		float starBrightness = 0.2F;
-		if (world.provider != null) {
-			starBrightness = world.getStarBrightness(partialTicks);
-		}
-		if (starBrightness > 0.0F && celestialObject != null) {
-			renderStars_cached(alphaBase * starBrightness);
-		}
-		
+
+		skyRenderer.render(tessellator, mc, 255);
+
 		// enable texture with alpha blending
 		GlStateManager.enableTexture2D();
 		GlStateManager.enableBlend();
 		GlStateManager.blendFunc(SourceFactor.SRC_ALPHA, DestFactor.ONE_MINUS_SRC_ALPHA);
 		GlStateManager.disableAlpha();
-		
-		// Star
-		/*
-		{
-			GlStateManager.pushMatrix();
-			final double starScale = isSpace ? 30.0D : 40.0D;
-			final double starRange = 150.0D;    // max 190
-			GlStateManager.rotate(-90.0F, 0.0F, 1.0F, 0.0F);
-			GlStateManager.rotate(0.3F * 360.0F, 1.0F, 0.0F, 0.0F);    // Vanilla is world.getCelestialAngle(partialTicks) * 360.0F
-			
-			final float alpha = isSpace ? 1.0F : 0.3F;
-			Minecraft.getMinecraft().getTextureManager().bindTexture(textureStar);
-			
-			vertexBuffer.begin(7, DefaultVertexFormats.POSITION_TEX_COLOR);
-			vertexBuffer.pos(-starScale, starRange, -starScale).tex(0.0D, 0.0D).color(1.0F, 1.0F, 1.0F, alpha).endVertex();
-			vertexBuffer.pos( starScale, starRange, -starScale).tex(1.0D, 0.0D).color(1.0F, 1.0F, 1.0F, alpha).endVertex();
-			vertexBuffer.pos( starScale, starRange,  starScale).tex(1.0D, 1.0D).color(1.0F, 1.0F, 1.0F, alpha).endVertex();
-			vertexBuffer.pos(-starScale, starRange,  starScale).tex(0.0D, 1.0D).color(1.0F, 1.0F, 1.0F, alpha).endVertex();
-			tessellator.draw();
-			GlStateManager.popMatrix();
-		}
-		/**/
-		
-		// CelestialObject
-		/*
-		{
-			GlStateManager.pushMatrix();
-			final double planetScale = 10.0D;
-			final double planetRange = 140.0D;
-			final float planetRotation = (float) (world.getSpawnPoint().getZ() - mc.player.posZ) * 0.1F;
-			GlStateManager.scale(0.6F, 0.6F, 0.6F);
-			GlStateManager.rotate(planetRotation, 1.0F, 0.0F, 0.0F);
-			GlStateManager.rotate(190F, 1.0F, 0.0F, 0.0F);
-			
-			Minecraft.getMinecraft().getTextureManager().bindTexture(texturePlanet);
-			
-			// world.getMoonPhase();
-			vertexBuffer.begin(7, DefaultVertexFormats.POSITION_TEX_COLOR);
-			vertexBuffer.pos(-planetScale, planetRange, -planetScale).tex(0, 1).color(1.0F, 0.0F, 1.0F, 1.0F).endVertex();
-			vertexBuffer.pos( planetScale, planetRange, -planetScale).tex(1, 1).color(1.0F, 0.0F, 1.0F, 1.0F).endVertex();
-			vertexBuffer.pos( planetScale, planetRange,  planetScale).tex(1, 0).color(1.0F, 0.0F, 1.0F, 1.0F).endVertex();
-			vertexBuffer.pos(-planetScale, planetRange,  planetScale).tex(0, 0).color(1.0F, 0.0F, 1.0F, 1.0F).endVertex();
-			tessellator.draw();
-			GlStateManager.scale(1.0F, 1.0F, 1.0F);
-			GlStateManager.popMatrix();
-		}
-		/**/
-		
+
 		// Planets
 		if (celestialObject != null && celestialObject.opacityCelestialObjects > 0.0F) {
 			final Vector3 vectorPlayer = GlobalRegionManager.getUniversalCoordinates(celestialObject, vec3Player.x, vec3Player.y, vec3Player.z);
@@ -198,67 +120,16 @@ public class RenderSpaceSky extends IRenderHandler {
 					continue;
 				}
 				renderCelestialObject(tessellator,
-				                      celestialObjectChild,
-				                      celestialObject.opacityCelestialObjects,
-				                      vectorPlayer);
+						celestialObjectChild,
+						celestialObject.opacityCelestialObjects,
+						vectorPlayer);
 			}
 		}
-		
-		// final double playerAltitude = mc.player.getPositionEyes(partialTicks).yCoord - world.getHorizon();
-		
-		// stratosphere box
-		/*
-		float var10;
-		float var11;
-		float var12;
-		if (playerAltitude < 0.0D) {
-			GlStateManager.pushMatrix();
-			GlStateManager.translate(0.0F, 12.0F, 0.0F);
-			GlStateManager.callList(callListBottomSkyBox);
-			GlStateManager.popMatrix();
-			var10 = 1.0F;
-			var11 = -((float) (playerAltitude + 65.0D));
-			var12 = -var10;
-			GlStateManager.color(255, 128, 0, 255);
-			vertexBuffer.begin(7, DefaultVertexFormats.POSITION);
-			vertexBuffer.pos(-var10, var11,  var10).endVertex();
-			vertexBuffer.pos( var10, var11,  var10).endVertex();
-			vertexBuffer.pos( var10, var12,  var10).endVertex();
-			vertexBuffer.pos(-var10, var12,  var10).endVertex();
-			vertexBuffer.pos(-var10, var12, -var10).endVertex();
-			vertexBuffer.pos( var10, var12, -var10).endVertex();
-			vertexBuffer.pos( var10, var11, -var10).endVertex();
-			vertexBuffer.pos(-var10, var11, -var10).endVertex();
-			vertexBuffer.pos( var10, var12, -var10).endVertex();
-			vertexBuffer.pos( var10, var12,  var10).endVertex();
-			vertexBuffer.pos( var10, var11,  var10).endVertex();
-			vertexBuffer.pos( var10, var11, -var10).endVertex();
-			vertexBuffer.pos(-var10, var11, -var10).endVertex();
-			vertexBuffer.pos(-var10, var11,  var10).endVertex();
-			vertexBuffer.pos(-var10, var12,  var10).endVertex();
-			vertexBuffer.pos(-var10, var12, -var10).endVertex();
-			vertexBuffer.pos(-var10, var12, -var10).endVertex();
-			vertexBuffer.pos(-var10, var12,  var10).endVertex();
-			vertexBuffer.pos( var10, var12,  var10).endVertex();
-			vertexBuffer.pos( var10, var12, -var10).endVertex();
-			tessellator.draw();
-		}
-		/**/
-		/*
-		// draw bottom skybox relative to horizon
-		GlStateManager.pushMatrix();
-		Minecraft.getMinecraft().getTextureManager().bindTexture(texturePlanet);
-		
-		// GlStateManager.translate(0.0F, (float)(16.0D - playerAltitude), 0.0F);
-		GlStateManager.callList(callListBottomSkyBox);
-		GlStateManager.popMatrix();
-		/**/
-		
-		
+
 		GlStateManager.disableBlend();
 		GlStateManager.enableAlpha();
 		GlStateManager.enableFog();
-		
+
 		GlStateManager.enableTexture2D();
 		GlStateManager.depthMask(true);
 	}
