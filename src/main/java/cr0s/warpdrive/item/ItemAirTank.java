@@ -112,6 +112,6 @@ public class ItemAirTank extends ItemAbstractBase implements IAirContainerItem {
 	                           @Nonnull final List<String> list, @Nonnull final ITooltipFlag advancedItemTooltips) {
 		super.addInformation(itemStack, world, list, advancedItemTooltips);
 		
-		Commons.addTooltip(list, new TextComponentTranslation("item.warpdrive.breathing.air_tank.tooltip.usage").getFormattedText());
+		Commons.addThisIsUselessTooltip(list);
 	}
 }

@@ -60,6 +60,7 @@ import cr0s.warpdrive.data.EnumShipMovementType;
 import cr0s.warpdrive.data.EnumDisplayAlignment;
 import cr0s.warpdrive.data.EnumTier;
 import cr0s.warpdrive.data.EnumTooltipCondition;
+import cr0s.warpdrive.event.custom.WarpDriveConfigLoadedEvent;
 import cr0s.warpdrive.network.PacketHandler;
 
 import net.minecraft.block.Block;
@@ -76,6 +77,7 @@ import net.minecraft.util.math.MathHelper;
 
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeModContainer;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 import net.minecraftforge.common.util.FakePlayer;
@@ -1751,6 +1753,8 @@ public class WarpDriveConfig {
 		
 		Dictionary.apply();
 		WarpDriveDataFixer.apply();
+
+		MinecraftForge.EVENT_BUS.post(new WarpDriveConfigLoadedEvent());
 	}
 	
 	private static void loadIC2() {
