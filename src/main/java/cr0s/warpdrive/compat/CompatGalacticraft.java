@@ -60,54 +60,54 @@ public class CompatGalacticraft implements IBlockTransformer {
 		}
 	}
 	
-	// disable breathing suffocation event server side
-	@SubscribeEvent
-	public void onGCCoreOxygenSuffocationEventPre(final GCCoreOxygenSuffocationEvent.Pre event) {
-		assert event.getEntity() != null;
-		
-		final Entity entity = event.getEntity();
-		final int x = MathHelper.floor(entity.posX);
-		final int z = MathHelper.floor(entity.posZ);
-		final CelestialObject celestialObject = CelestialObjectManager.get(entity.world, x, z);
-		if (celestialObject == null) {
-			// unregistered dimension => exit
-			return;
-		}
-		
-		final GCPlayerStats gcPlayerStats = GCPlayerStats.get(event.getEntity());
-		if (gcPlayerStats != null) {
-			gcPlayerStats.setLastOxygenSetupValid(true);
-		}
-		
-		event.setCanceled(true);
-	}
-	
-	// disable breathing alarm overlay client side
-	@SideOnly(Side.CLIENT)
-	@SubscribeEvent(priority = EventPriority.LOWEST)
-	public void onLivingUpdate(@Nonnull final LivingUpdateEvent event) {
-		if (Minecraft.getMinecraft().player == null) {
-			return;
-		}
-		
-		final EntityLivingBase entityLivingBase = event.getEntityLiving();
-		if (entityLivingBase != Minecraft.getMinecraft().player) {
-			return;
-		}
-		
-		final int x = MathHelper.floor(entityLivingBase.posX);
-		final int z = MathHelper.floor(entityLivingBase.posZ);
-		final CelestialObject celestialObject = CelestialObjectManager.get(entityLivingBase.world, x, z);
-		if (celestialObject == null) {
-			// unregistered dimension => exit
-			return;
-		}
-		
-		final GCPlayerStatsClient stats = GCPlayerStatsClient.get(Minecraft.getMinecraft().player);
-		if (stats != null) {
-			stats.setOxygenSetupValid(true);
-		}
-	}
+//	// disable breathing suffocation event server side
+//	@SubscribeEvent
+//	public void onGCCoreOxygenSuffocationEventPre(final GCCoreOxygenSuffocationEvent.Pre event) {
+//		assert event.getEntity() != null;
+//
+//		final Entity entity = event.getEntity();
+//		final int x = MathHelper.floor(entity.posX);
+//		final int z = MathHelper.floor(entity.posZ);
+//		final CelestialObject celestialObject = CelestialObjectManager.get(entity.world, x, z);
+//		if (celestialObject == null) {
+//			// unregistered dimension => exit
+//			return;
+//		}
+//
+//		final GCPlayerStats gcPlayerStats = GCPlayerStats.get(event.getEntity());
+//		if (gcPlayerStats != null) {
+//			gcPlayerStats.setLastOxygenSetupValid(true);
+//		}
+//
+//		event.setCanceled(true);
+//	}
+//
+//	// disable breathing alarm overlay client side
+//	@SideOnly(Side.CLIENT)
+//	@SubscribeEvent(priority = EventPriority.LOWEST)
+//	public void onLivingUpdate(@Nonnull final LivingUpdateEvent event) {
+//		if (Minecraft.getMinecraft().player == null) {
+//			return;
+//		}
+//
+//		final EntityLivingBase entityLivingBase = event.getEntityLiving();
+//		if (entityLivingBase != Minecraft.getMinecraft().player) {
+//			return;
+//		}
+//
+//		final int x = MathHelper.floor(entityLivingBase.posX);
+//		final int z = MathHelper.floor(entityLivingBase.posZ);
+//		final CelestialObject celestialObject = CelestialObjectManager.get(entityLivingBase.world, x, z);
+//		if (celestialObject == null) {
+//			// unregistered dimension => exit
+//			return;
+//		}
+//
+//		final GCPlayerStatsClient stats = GCPlayerStatsClient.get(Minecraft.getMinecraft().player);
+//		if (stats != null) {
+//			stats.setOxygenSetupValid(true);
+//		}
+//	}
 	
 	@Override
 	public boolean isApplicable(final Block block, final int metadata, final TileEntity tileEntity) {
