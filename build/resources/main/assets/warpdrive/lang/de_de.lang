@@ -1,0 +1,1001 @@
+
+death.attack.warpdrive.asphyxia=%1$s ging die Luft aus
+death.attack.warpdrive.asphyxia.player=%1$s wurde von %2$s erstickt
+death.attack.warpdrive.cold=%1$s erfror
+death.attack.warpdrive.cold.player=%1$s wurde von %2$s zu Tode gefroren
+death.attack.warpdrive.irradiation=%1$s starb an Verstrahlung
+death.attack.warpdrive.irradiation.player=%1$s wurde von %2$s tödlich verstrahlt
+death.attack.warpdrive.laser=%1$s verbruzelte im Laser
+death.attack.warpdrive.laser.player=%1$s wurde von %2$s zu Tode gelasert
+death.attack.warpdrive.shock=%1$s starb an einen Stromschlag
+death.attack.warpdrive.shock.player=%1$s wurde von %2$s zu Tode geschockt
+death.attack.warpdrive.teleportation=%1$s wurde in seine Atome zerlegt
+death.attack.warpdrive.teleportation.player=%1$s wurde durch %2$s beim teleportieren getötet
+death.attack.warpdrive.warm=%1$s verglühte
+death.attack.warpdrive.warm.player=%1$s wurde von %2$s gebruzelt
+
+itemGroup.warpdrive.hull=WarpDrive's rumpfs
+itemGroup.warpdrive.main=WarpDrive
+
+item.warpdrive.component.malformed.name=Fehlerhaftes Item
+item.warpdrive.component.memory_crystal.name=Speicherkristall
+item.warpdrive.component.memory_cluster.name=Memory Cluster
+
+item.warpdrive.component.diamond_crystal.name=Diamantkristall
+item.warpdrive.component.emerald_crystal.name=Smaragdkristall
+
+item.warpdrive.component.capacitive_crystal.name=Kapazitätskristall
+item.warpdrive.component.capacitive_cluster.name=Capacitive Cluster
+
+item.warpdrive.component.ender_coil.name=Enderkristall
+item.warpdrive.component.diamond_coil.name=Spulenkristall
+item.warpdrive.component.computer_interface.name=Computer Schnittstelle
+
+item.warpdrive.component.bone_charcoal.name=Knochenkohle
+item.warpdrive.component.activated_carbon.name=Aktivkohle
+item.warpdrive.component.air_canister_empty.name=Leerer Luftkanister
+item.warpdrive.component.air_canister_empty.tooltip=§bRechtsklicke einen Luftgenerator§r um mich zu füllen
+
+item.warpdrive.component.flat_screen.name=Flatscreen
+item.warpdrive.component.holographic_projector.name=Holographic projector
+
+item.warpdrive.component.glass_tank.name=Glas Tank
+item.warpdrive.component.motor.name=Motor
+item.warpdrive.component.pump.name=Pump
+
+item.warpdrive.component.lens.name=Linse
+item.warpdrive.component.zoom.name=Zoom
+item.warpdrive.component.diffraction_grating.name=Beugungsgitter
+
+item.warpdrive.component.power_interface.name=Power Schnittstelle
+item.warpdrive.component.superconductor.name=Supraleiter
+
+item.warpdrive.component.laser_medium_empty.name=Medium Laser (leer)
+item.warpdrive.component.electromagnetic_projector.name=Elektromagnetischer Projektor
+item.warpdrive.component.reactor_core.name=Reaktorkern
+
+item.warpdrive.component.raw_rubber.name=Raw rubber clump
+item.warpdrive.component.raw_rubber.tooltip=Harvested from Jungle wood with Laser tree farm
+item.warpdrive.component.rubber.name=Rubber
+
+item.warpdrive.component.biopulp.name=Biopulp
+item.warpdrive.component.biofiber.name=Biofiber
+
+item.warpdrive.component.raw_ceramic.name=Raw Ceramic
+item.warpdrive.component.ceramic.name=Ceramic
+
+item.warpdrive.component.raw_carbon_fiber.name=Raw Carbon fiber
+item.warpdrive.component.raw_carbon_mesh.name=Raw Carbon Mesh
+item.warpdrive.component.carbon_fiber.name=Carbon Fiber
+
+item.warpdrive.armor.basic.helmet.name=Emergency Helm
+item.warpdrive.armor.basic.chestplate.name=Emergency Brustpanzer
+item.warpdrive.armor.basic.leggings.name=Emergency Beinschutz
+item.warpdrive.armor.basic.boots.name=Emergency Stiefel
+item.warpdrive.armor.advanced.helmet.name=Re-entry Helm
+item.warpdrive.armor.advanced.chestplate.name=Re-entry Brustpanzer
+item.warpdrive.armor.advanced.leggings.name=Re-entry Beinschutz
+item.warpdrive.armor.advanced.boots.name=Re-entry Stiefel
+item.warpdrive.armor.superior.helmet.name=Warp Helm
+item.warpdrive.armor.superior.chestplate.name=Warp Brustpanzer
+item.warpdrive.armor.superior.leggings.name=Warp Beinschutz
+item.warpdrive.armor.superior.boots.name=Warp Stiefel
+
+item.warpdrive.atomic.electromagnetic_cell.basic.name=Standard Elektromagnetische Zelle
+item.warpdrive.atomic.electromagnetic_cell.advanced.name=Weiterentwickelter Elektromagnetische Zelle
+item.warpdrive.atomic.electromagnetic_cell.superior.name=Überlegener Elektromagnetische Zelle
+item.warpdrive.atomic.electromagnetic_cell.tooltip.empty=Nutze einen Teilchenbeschleuniger, um mich zu füllen!
+item.warpdrive.atomic.electromagnetic_cell.tooltip.filled=Enthält %1$s Å³ %2$s
+
+item.warpdrive.breathing.air_tank.canister.name=Luftkanister
+item.warpdrive.breathing.air_tank.basic.name=Basic Air Tank !!!
+item.warpdrive.breathing.air_tank.advanced.name=Advanced Air Tank !!!
+item.warpdrive.breathing.air_tank.superior.name=Superior Air Tank !!!
+item.warpdrive.breathing.air_tank.tooltip.usage=§bRechtsklicke einen Luftgenerator§r um mich zu füllen
+
+item.warpdrive.energy.IC2reactorLaserFocus.name=IC2 Reaktor-Laser-Fokus
+
+item.warpdrive.force_field.shape.none.name=Keine Form
+item.warpdrive.force_field.shape.none.tooltip=§4Ungültiges Item
+item.warpdrive.force_field.shape.sphere.name=Kugel Form
+item.warpdrive.force_field.shape.sphere.tooltip=
+item.warpdrive.force_field.shape.cylinder_h.name=Horizontaler Zylinder Form
+item.warpdrive.force_field.shape.cylinder_h.tooltip=
+item.warpdrive.force_field.shape.cylinder_v.name=Vertikaler Zylinder Form
+item.warpdrive.force_field.shape.cylinder_v.tooltip=
+item.warpdrive.force_field.shape.cube.name=Würfel Form
+item.warpdrive.force_field.shape.cube.tooltip=
+item.warpdrive.force_field.shape.plane.name=Ebenen Form
+item.warpdrive.force_field.shape.plane.tooltip=
+item.warpdrive.force_field.shape.tube.name=Röhren Form
+item.warpdrive.force_field.shape.tube.tooltip=
+item.warpdrive.force_field.shape.tunnel.name=Tunnel Form
+item.warpdrive.force_field.shape.tunnel.tooltip=
+item.warpdrive.force_field.shape.tooltip.usage=§bRechtsklicke§r einen Projektor um ihn aufzuwerten\n§bSchleich-Rechtsklicke§r zum abwerten
+
+item.warpdrive.force_field.upgrade.none.name=Kein Upgrade
+item.warpdrive.force_field.upgrade.none.tooltip=§4Ungültiges Item
+item.warpdrive.force_field.upgrade.attraction.name=Anziehungs Upgrade
+item.warpdrive.force_field.upgrade.attraction.tooltip=Zieht Block Brecher Drops in einen Stauraum. Füge mehr Anzeihungs Upgrades hinzu, um Items, passive Entities, Monster und Spieler anzuziehen. Nutze ein Inversions Upgrade für einen Terraform Effekt.
+item.warpdrive.force_field.upgrade.breaking.name=Block Brecher Upgrade
+item.warpdrive.force_field.upgrade.breaking.tooltip=Zerstört Blöcke anstatt ein Kraftfeld zu projizieren. Füge Block Brecher Upgrades hinzu um den Efffekt zu verstärken.
+item.warpdrive.force_field.upgrade.camouflage.name=Camouflage Upgrade
+item.warpdrive.force_field.upgrade.camouflage.tooltip=Tarnt das Kraftfeld. Platziere den Block, den du als Tarnung benutzen willst, auf dem Relais.
+item.warpdrive.force_field.upgrade.cooling.name=Kühler Upgrade
+item.warpdrive.force_field.upgrade.cooling.tooltip=Friere Blöcke und Entities ein. Je mehr Upgrades desto größer der Effekt. Inversions Upgrade für Terraforming Effekt.
+item.warpdrive.force_field.upgrade.fusion.name=Fusions Upgrade
+item.warpdrive.force_field.upgrade.fusion.tooltip=Verschmelze zwei Kraftfelder, die dieselbe Strahlfrequenz haben.
+item.warpdrive.force_field.upgrade.heating.name=Heizungs Upgrade
+item.warpdrive.force_field.upgrade.heating.tooltip=Erhitze Blöcke und Entities. Mehr Upgrades verstärken den Effekt. Nutze ein Inversions Upgrade für Terraforming Effekt.
+item.warpdrive.force_field.upgrade.inversion.name=Inversions Upgrade
+item.warpdrive.force_field.upgrade.inversion.tooltip=§4Work in progress\nOberflächen Effekt zu Raum Effekt. Für Entity Zielerfassung oder Terraforming.
+item.warpdrive.force_field.upgrade.item_port.name=Item Anschluss Upgrade
+item.warpdrive.force_field.upgrade.item_port.tooltip=Interagiere mit angeschlossenen Stauräumen. Nutze ein Anziehungs Upgrade, um Block Brecher Drops anzuziehen. Nutze ein Rückstoß Upgrade, um mit einem Stabilisations Upgrade Blöcke zu setzen.
+item.warpdrive.force_field.upgrade.pumping.name=Pumpen Upgrade
+item.warpdrive.force_field.upgrade.pumping.tooltip=§4Work in progress\nPumpe Flüssigkeiten im Einflussbereich. Um dickflüssigeres zu pumpen füge mehr  Pumpen Upgrades hinzu.
+item.warpdrive.force_field.upgrade.range.name=Reichweiten Upgrade
+item.warpdrive.force_field.upgrade.range.tooltip=Vergrößere den maximalen Einflussbereich
+item.warpdrive.force_field.upgrade.repulsion.name=Rückstoß Upgrade
+item.warpdrive.force_field.upgrade.repulsion.tooltip=Verschiebe gelagerte Items, um sie mit einem Stabilisations Upgrade zu setzen. Füge mehr Rückstoß Upgrades hinzu, um Items, passive Entities, Monster und Spieler zu beeinflussen. Nutze ein Inversions Upgrade für einen Terraform Effekt.
+item.warpdrive.force_field.upgrade.rotation.name=Rotations Upgrade
+item.warpdrive.force_field.upgrade.rotation.tooltip=Aktiviert Kraftfeld Roatation
+item.warpdrive.force_field.upgrade.shock.name=Shock Upgrade
+item.warpdrive.force_field.upgrade.shock.tooltip=Schocke Blocks und Entities. Mehr Upgrades verstärken den Effekt. Inversions Upgrade für Terraforming Effekt.
+item.warpdrive.force_field.upgrade.silencer.name=Schalldämpfer Upgrade
+item.warpdrive.force_field.upgrade.silencer.tooltip=Dämpft die Geräusche verbundener Maschinen.
+item.warpdrive.force_field.upgrade.speed.name=Geschwindigkeits Upgrade
+item.warpdrive.force_field.upgrade.speed.tooltip=Erhöhe die Kraftfeld Projektions Geschwindigkeit.
+item.warpdrive.force_field.upgrade.stabilization.name=Stabilisations Upgrade
+item.warpdrive.force_field.upgrade.stabilization.tooltip=Platziert Blöcke anstatt ein Kraftfeld zu projizieren.
+item.warpdrive.force_field.upgrade.thickness.name=Stärke Upgrade
+item.warpdrive.force_field.upgrade.thickness.tooltip=Erhöhe die Dicke des Kraftfelds. Mehr Upgrades verstärken den Effekt (bis zu 2x).
+item.warpdrive.force_field.upgrade.translation.name=Translations Upgrade
+item.warpdrive.force_field.upgrade.translation.tooltip=Aktiviert Kraftfeld Translation.
+item.warpdrive.force_field.upgrade.tooltip.usage.projector=§bRechtsklicke einen Projektor§r um ihn aufzuwerten
+item.warpdrive.force_field.upgrade.tooltip.usage.relay=§bRechtsklicke ein Realais§r um es aufzuwerten
+item.warpdrive.force_field.upgrade.tooltip.usage.dismount=§bSchleich-Rechtsklicke§r zum abwerten
+
+item.warpdrive.upgrade.Power.name=Power Upgrade
+item.warpdrive.upgrade.Speed.name=Geschwindigkeits Upgrade
+item.warpdrive.upgrade.Range.name=Reichweiten Upgrade
+item.warpdrive.upgrade.Energy.name=Energie Upgrade
+
+
+item.warpdrive.tool.ship_token.name=Schiffes token
+item.warpdrive.tool.ship_token.tooltip.usage=Token exchangeable for ship '%1$s'\n§bEnter a builder's field§r to claim it
+item.warpdrive.tool.ship_token.tooltip.usage-legacyTranslation=Kristall Kapsel des Schiffes '%1$s'\n§bBetritt das Scanner Feld§r um das Schiff zu bauen.
+item.warpdrive.tool.ship_token0.name=Schiffes token #0
+item.warpdrive.tool.ship_token1.name=Schiffes token #1
+item.warpdrive.tool.ship_token2.name=Schiffes token #2
+item.warpdrive.tool.ship_token3.name=Schiffes token #3
+item.warpdrive.tool.ship_token4.name=Schiffes token #4
+item.warpdrive.tool.ship_token5.name=Schiffes token #5
+item.warpdrive.tool.ship_token10.name=Schiffes token #10
+item.warpdrive.tool.ship_token11.name=Schiffes token #11
+item.warpdrive.tool.ship_token12.name=Schiffes token #12
+item.warpdrive.tool.ship_token13.name=Schiffes token #13
+item.warpdrive.tool.ship_token14.name=Schiffes token #14
+item.warpdrive.tool.ship_token15.name=Schiffes token #15
+item.warpdrive.tool.ship_token20.name=Schiffes token #20
+item.warpdrive.tool.ship_token21.name=Schiffes token #21
+item.warpdrive.tool.ship_token22.name=Schiffes token #22
+item.warpdrive.tool.ship_token23.name=Schiffes token #23
+item.warpdrive.tool.ship_token24.name=Schiffes token #24
+item.warpdrive.tool.ship_token25.name=Schiffes token #25
+item.warpdrive.tool.ship_token30.name=Schiffes token #30
+item.warpdrive.tool.ship_token31.name=Schiffes token #31
+item.warpdrive.tool.ship_token32.name=Schiffes token #32
+item.warpdrive.tool.ship_token33.name=Schiffes token #33
+item.warpdrive.tool.ship_token34.name=Schiffes token #34
+item.warpdrive.tool.ship_token35.name=Schiffes token #35
+item.warpdrive.tool.ship_token40.name=Schiffes token #40
+item.warpdrive.tool.ship_token41.name=Schiffes token #41
+item.warpdrive.tool.ship_token42.name=Schiffes token #42
+item.warpdrive.tool.ship_token43.name=Schiffes token #43
+item.warpdrive.tool.ship_token44.name=Schiffes token #44
+item.warpdrive.tool.ship_token45.name=Schiffes token #45
+
+
+item.warpdrive.tool.tuning_driver.video_channel.name=Videokanal Werkzeug
+item.warpdrive.tool.tuning_driver.beam_frequency.name=Strahlfrequenz Werkzeug
+item.warpdrive.tool.tuning_driver.control_channel.name=Steuerungskanal Werkzeug
+
+item.warpdrive.tool.tuning_driver.tooltip.usage=§bRechtsklicke einen Block§r um seine Kristalle einzustellen\n§bSchleiche§r um seinen Wert zu erfahren\n§bRechtsklicke die Luft§r um den Modus zu ändern
+
+
+item.warpdrive.tool.tuning_fork.name=Stimmgabel
+item.warpdrive.tool.tuning_fork.white.name=Weiße Stimmgabel
+item.warpdrive.tool.tuning_fork.orange.name=Orange Stimmgabel
+item.warpdrive.tool.tuning_fork.magenta.name=Magenta Stimmgabel
+item.warpdrive.tool.tuning_fork.lightBlue.name=Hellblaue Stimmgabel
+item.warpdrive.tool.tuning_fork.yellow.name=Gelbe Stimmgabel
+item.warpdrive.tool.tuning_fork.lime.name=Hellgrüne Stimmgabel
+item.warpdrive.tool.tuning_fork.pink.name=Rosa Stimmgabel
+item.warpdrive.tool.tuning_fork.gray.name=Graue Stimmgabel
+item.warpdrive.tool.tuning_fork.silver.name=Silberne Stimmgabel
+item.warpdrive.tool.tuning_fork.cyan.name=Cyan Stimmgabel
+item.warpdrive.tool.tuning_fork.purple.name=Lila Stimmgabel
+item.warpdrive.tool.tuning_fork.blue.name=Blaue Stimmgabel
+item.warpdrive.tool.tuning_fork.brown.name=Braune Stimmgabel
+item.warpdrive.tool.tuning_fork.green.name=Grüne Stimmgabel
+item.warpdrive.tool.tuning_fork.red.name=Rote Stimmgabel
+item.warpdrive.tool.tuning_fork.black.name=Schwarze Stimmgabel
+
+item.warpdrive.tool.tuning_fork.tooltip.usage=§bRecktsklicke einen Block§r um seine Kristalle einzustellen\n§bSchleiche§r um alternative Kristalle einzustellen
+
+
+item.warpdrive.tool.wrench.name=Wrench
+item.warpdrive.tool.wrench.tooltip=§bRight click a block§r to rotate it
+
+
+tile.warpdrive.decoration.bedrock_glass.name=Bedrock Glass !!!
+tile.warpdrive.decoration.decorative.plain.name=Plain metal decoration
+tile.warpdrive.decoration.decorative.grated.name=Grated metal decoration
+tile.warpdrive.decoration.decorative.glass.name=Grated glass decoration
+tile.warpdrive.decoration.decorative.stripes_black_down.name=Black & yellow stripes down
+tile.warpdrive.decoration.decorative.stripes_black_up.name=Black & yellow stripes up
+tile.warpdrive.decoration.decorative.stripes_yellow_down.name=Yellow & black stripes down
+tile.warpdrive.decoration.decorative.stripes_yellow_up.name=Yellow & black stripes up
+tile.warpdrive.decoration.gas.name=Gas Block
+tile.warpdrive.decoration.lamp_bubble.name=Bubble Lamp !!!
+tile.warpdrive.decoration.lamp_flat.name=Flat Lamp !!!
+tile.warpdrive.decoration.lamp_long.name=Long Lamp !!!
+item.warpdrive.decoration.lamp.tooltip.usage=§bRight click§r to light on/off !!!
+
+tile.warpdrive.passive.iridium_block.name=Iridium Block
+tile.warpdrive.passive.highly_advanced_machine.name=Stark weiterentwickelter Maschinen Block
+
+tile.warpdrive.machines.chunk_loader.basic.name=Basic Chunk Loader
+tile.warpdrive.machines.chunk_loader.advanced.name=Advanced Chunk Loader
+tile.warpdrive.machines.chunk_loader.superior.name=Superior Chunk Loader
+tile.warpdrive.machines.laser.name=Laser
+tile.warpdrive.machines.laser_medium.basic.name=Basic Lasermedium
+tile.warpdrive.machines.laser_medium.advanced.name=Advanced Lasermedium
+tile.warpdrive.machines.laser_medium.superior.name=Superior Lasermedium
+
+tile.warpdrive.machines.security_station.name=Security Station
+
+tile.warpdrive.atomic.accelerator_core.name=Beschleunigungsregler
+tile.warpdrive.atomic.accelerator_core.tooltip=Regelt einen oder mehrere Teilchenbeschleuniger.\nSollte neben einem Elektromagnet platziert werden.
+tile.warpdrive.atomic.accelerator_control_point.name=Beschleuniger Kontrollpunkt
+tile.warpdrive.atomic.accelerator_control_point.tooltip=Regele Beschleuniger Knotenpunkte wie Collider, Input und Output.\nSollte genau einen Block neben einer Void Shell platziert werden.\nSpeichere Erzeugnisse in jedem direkt verbundenen Speicher.
+tile.warpdrive.atomic.chiller.basic.name=Standard Kühler
+tile.warpdrive.atomic.chiller.basic.tooltip=Kühlt Elektromagneten verbundener Teilchenbeschleuniger.\nSollte neben einem Elektromagnet platziert werden.
+tile.warpdrive.atomic.chiller.advanced.name=Weiterentwickelter Kühler
+tile.warpdrive.atomic.chiller.advanced.tooltip=Kühlt Elektromagneten verbundener Teilchenbeschleuniger.\nSollte neben einem Elektromagnet platziert werden.
+tile.warpdrive.atomic.chiller.superior.name=Überlegener Kühler
+tile.warpdrive.atomic.chiller.superior.tooltip=Kühlt Elektromagneten verbundener Teilchenbeschleuniger.\nSollte neben einem Elektromagnet platziert werden.
+tile.warpdrive.atomic.electromagnet.basic.plain.name=Standard normaler Elektromagnet
+tile.warpdrive.atomic.electromagnet.basic.plain.tooltip=Beschleunige, fokussiere und lenke Teilchen in der verbundenen Void Shell.
+tile.warpdrive.atomic.electromagnet.basic.glass.name=Standard Glas Elektromagnet
+tile.warpdrive.atomic.electromagnet.basic.glass.tooltip=Genau wie der normale Elektromagnet, aber man kann durchsehen.
+tile.warpdrive.atomic.electromagnet.advanced.plain.name=Weiterentwickelter normaler Elektromagnet
+tile.warpdrive.atomic.electromagnet.advanced.plain.tooltip=Beschleunige, fokussiere und lenke Teilchen in der verbundenen Void Shell.
+tile.warpdrive.atomic.electromagnet.advanced.glass.name=Weiterentwickelter Glas Elektromagnet
+tile.warpdrive.atomic.electromagnet.advanced.glass.tooltip=Genau wie der normale Elektromagnet, aber man kann durchsehen.
+tile.warpdrive.atomic.electromagnet.superior.plain.name=Überlegener normaler Elektromagnet
+tile.warpdrive.atomic.electromagnet.superior.plain.tooltip=Beschleunige, fokussiere und lenke Teilchen in der verbundenen Void Shell.
+tile.warpdrive.atomic.electromagnet.superior.glass.name=Überlegener Glas Elektromagnet
+tile.warpdrive.atomic.electromagnet.superior.glass.tooltip=Genau wie der normale Elektromagnet, aber man kann durchsehen.
+tile.warpdrive.atomic.particles_collider.name=Teilchen Collider
+tile.warpdrive.atomic.particles_collider.tooltip=Lenkt Teilchen ab, um miteinander oder mit einem Ziel zu kollidieren.\nBenötigt 12 Blöcke und einen Beschleuniger Kontrollpunkt für Resultate.
+tile.warpdrive.atomic.particles_injector.name=Teilchen Injektor
+tile.warpdrive.atomic.particles_injector.tooltip=Injiziere Items oder Teilchen aus einem verbundenen Speicher in einen Standard Beschleuniger.
+tile.warpdrive.atomic.void_shell_plain.name=Normale Void Shell
+tile.warpdrive.atomic.void_shell_plain.tooltip=Bietet 2 leere Kanäle für Teilchen in einem Beschleuniger.\nVerbindet sich nur horizontal mit anderen Void Shells.
+tile.warpdrive.atomic.void_shell_glass.name=Glas Void Shell
+tile.warpdrive.atomic.void_shell_glass.tooltip=Genau wie die normale Void Shell, aber man kann die Teilchen durchsehen.
+
+tile.warpdrive.breathing.air.name=Luft Block
+tile.warpdrive.breathing.air_generator.basic.name=Standard Luftgenerator
+tile.warpdrive.breathing.air_generator.advanced.name=Weiterentwickeltes Luftgenerator
+tile.warpdrive.breathing.air_generator.superior.name=Überlegenes Luftgenerator
+tile.warpdrive.breathing.air_shield.name=Energie-Luftschild
+
+tile.warpdrive.building.ship_scanner.basic.name=Shuttle Raumschiff Scanner
+tile.warpdrive.building.ship_scanner.advanced.name=Corvette Raumschiff Scanner
+tile.warpdrive.building.ship_scanner.superior.name=Frigate Raumschiff Scanner
+
+tile.warpdrive.collection.laser_tree_farm.name=Laser Baumfarm
+tile.warpdrive.collection.mining_laser.name=Bergbau Laser
+
+tile.warpdrive.detection.biometric_scanner.name=Biometric Scanner
+tile.warpdrive.detection.biometric_scanner.tooltip=§bRight click§r to get identified.
+tile.warpdrive.detection.camera.name=Kamera
+tile.warpdrive.detection.cloaking_coil.name=Tarnfeld Spule
+tile.warpdrive.detection.cloaking_core.name=Tarnfeld Kern
+tile.warpdrive.detection.environmental_sensor.name=Environmental Sensor
+tile.warpdrive.detection.environmental_sensor.tooltip=Reports local time and weather
+tile.warpdrive.detection.monitor.name=Monitor
+tile.warpdrive.detection.radar.name=Radar
+tile.warpdrive.detection.warp_isolation.name=Warp-Feld Isolations Block
+tile.warpdrive.detection.warp_isolation.tooltip.usage=Place up to %5$d m away from a ship core\nUsing %1$d to %3$d isolation blocks will absorb %2$d %% to %4$d %% of radar waves
+
+tile.warpdrive.detection.siren_industrial.basic.name=Standard Industrielle Sirene
+tile.warpdrive.detection.siren_industrial.advanced.name=Weiterentwickelte Industrielle Sirene
+tile.warpdrive.detection.siren_industrial.superior.name=Überlegene Industrielle Sirene
+tile.warpdrive.detection.siren_industrial.tooltip=Ausgelöst durch ein Redstone Signal.
+tile.warpdrive.detection.siren_industrial.tooltip.usage=Lässt einen Alarm bis zu %1$d m weit ertönen.
+tile.warpdrive.detection.siren_military.basic.name=Standard Luftschutzsirene
+tile.warpdrive.detection.siren_military.advanced.name=Weiterentwickelte Luftschutzsirene
+tile.warpdrive.detection.siren_military.superior.name=Überlegene Luftschutzsirene
+tile.warpdrive.detection.siren_military.tooltip=Ausgelöst durch ein Redstone Signal.
+tile.warpdrive.detection.siren_military.tooltip.usage=Lässt einen Alarm bis zu %1$d m weit ertönen.
+tile.warpdrive.detection.speaker.basic.name=Basic Speaker
+tile.warpdrive.detection.speaker.advanced.name=Advanced Speaker
+tile.warpdrive.detection.speaker.superior.name=Superior Speaker
+tile.warpdrive.detection.speaker.tooltip.usage=Sends messages to players up to %1$d m away.
+tile.warpdrive.detection.virtual_assistant.basic.name=Basic Virtual Assistant
+tile.warpdrive.detection.virtual_assistant.advanced.name=Advanced Virtual Assistant
+tile.warpdrive.detection.virtual_assistant.superior.name=Superior Virtual Assistant
+tile.warpdrive.detection.virtual_assistant.tooltip.usage=Detects messages from players up to %1$d m away.
+
+tile.warpdrive.energy.enan_reactor_core.basic.name=Standard Enantiomorpher Reaktorkern
+tile.warpdrive.energy.enan_reactor_core.advanced.name=Weiterentwickelte Enantiomorpher Reaktorkern
+tile.warpdrive.energy.enan_reactor_core.superior.name=Überlegene Enantiomorpher Reaktorkern
+tile.warpdrive.energy.enan_reactor_frame.basic.name=Standard Enantiomorpher Reaktorkern Frame
+tile.warpdrive.energy.enan_reactor_frame.advanced.name=Weiterentwickelte Enantiomorpher Reaktorkern Frame
+tile.warpdrive.energy.enan_reactor_frame.superior.name=Überlegene Enantiomorpher Reaktorkern Frame
+tile.warpdrive.energy.enan_reactor_laser.name=Enantiomorper Reaktor Stabilisierungs Laser
+tile.warpdrive.energy.capacitor.creative.name=Null-Punkt-Modul
+tile.warpdrive.energy.capacitor.creative.tooltip=Kreativ Subraum Kondensator
+tile.warpdrive.energy.capacitor.basic.name=Standard Subraum Kondensator
+tile.warpdrive.energy.capacitor.advanced.name=Weiterentwickelter Subraum Kondensator
+tile.warpdrive.energy.capacitor.superior.name=Überlegener Subraum Kondensator
+tile.warpdrive.energy.ic2_reactor_laser_cooler.name=IC2 Reaktor Laser Cooler
+
+tile.warpdrive.force_field.block1.name=Standard Kraftfeld
+tile.warpdrive.force_field.block2.name=Weiterentwickeltes Kraftfeld
+tile.warpdrive.force_field.block3.name=Überlegenes Kraftfeld
+tile.warpdrive.force_field.projector.basic.name=Standard Kraftfeld Projektor
+tile.warpdrive.force_field.projector.basic.single.name=Standard Kraftfeld Halb Projektor
+tile.warpdrive.force_field.projector.basic.double.name=Standard Kraftfeld Voll Projektor
+tile.warpdrive.force_field.projector.advanced.name=Weiterentwickelter Kraftfeld Projektor
+tile.warpdrive.force_field.projector.advanced.single.name=Weiterentwickelter Kraftfeld Halb Projektor
+tile.warpdrive.force_field.projector.advanced.double.name=Weiterentwickelter Kraftfeld Voll Projektor
+tile.warpdrive.force_field.projector.superior.name=Überlegener Kraftfeld Projektor
+tile.warpdrive.force_field.projector.superior.single.name=Überlegener Kraftfeld Halb Projektor
+tile.warpdrive.force_field.projector.superior.double.name=Überlegener Kraftfeld Voll Projektor
+
+tile.warpdrive.force_field.relay.basic.name=Standard Kraftfeld Relais
+tile.warpdrive.force_field.relay.basic.tooltip=Unterstützt bis zu 1 Upgrade im Netzwerk
+tile.warpdrive.force_field.relay.advanced.name=Weiterentwickeltes Kraftfeld Relais
+tile.warpdrive.force_field.relay.advanced.tooltip=Unterstützt bis zu 1 Upgrade im Netzwerk
+tile.warpdrive.force_field.relay.superior.name=Überlegenes Kraftfeld Relais
+tile.warpdrive.force_field.relay.superior.tooltip=Unterstützt bis zu 1 Upgrade im Netzwerk
+
+tile.warpdrive.movement.lift.name=Lift
+
+tile.warpdrive.movement.ship_controller.basic.name=Remote Shuttle Raumschiff Steuerung
+tile.warpdrive.movement.ship_controller.advanced.name=Remote Corvette Raumschiff Steuerung
+tile.warpdrive.movement.ship_controller.superior.name=Remote Frigate Raumschiff Steuerung
+tile.warpdrive.movement.ship_controller.exceptional.name=Remote Capital Raumschiff Steuerung
+tile.warpdrive.movement.ship_controller.legendary.name=Remote Planetary Raumschiff Steuerung
+tile.warpdrive.movement.ship_controller.tooltip=Optional block to control a ship core remotely. Schließe einen Computer an, um das Interface zu öffnen.
+tile.warpdrive.movement.ship_controller.away_from_core=Remote controller is for remote usage, also they're optional now...
+
+tile.warpdrive.movement.ship_core.basic.name=Shuttle Raumschiff Kern
+tile.warpdrive.movement.ship_core.advanced.name=Corvette Raumschiff Kern
+tile.warpdrive.movement.ship_core.superior.name=Frigate Raumschiff Kern
+tile.warpdrive.movement.ship_core.exceptional.name=Capital Raumschiff Kern
+tile.warpdrive.movement.ship_core.legendary.name=Planetary Raumschiff Kern
+tile.warpdrive.movement.ship_core.tooltip=Defines your ship center. Schließe eine Energiequelle an, um den Kern zu laden. Schließe einen Computer an, um das Interface zu öffnen.
+tile.warpdrive.movement.ship_core.bounding_box.disabled=Bounding box display have been disabled.
+tile.warpdrive.movement.ship_core.bounding_box.enabled=Bounding box display is now enabled. Only you can see it.\n§bSneak right-click the Ship core§r to disable it.
+tile.warpdrive.movement.ship_core.tooltip.constrains=Size is up to %1$d x %1$d x %1$d blocks.\nMass is %2$d to %3$d tons.\nMass on a planet is %4$d tons max.\nMass to engage warp is %5$d tons min.
+
+tile.warpdrive.movement.transporter_beacon.name=Transporter Leuchtfeuer
+tile.warpdrive.movement.transporter_beacon.tooltip=§bRight click a Transporter Core§r to set its remote location.\n§bSneak§r to retrieve its signature.\n§bPlace as a block§r to trigger emergency transportation.
+tile.warpdrive.movement.transporter_containment.name=Transporter Containment
+tile.warpdrive.movement.transporter_core.name=Transporter Core
+tile.warpdrive.movement.transporter_scanner.name=Transporter Scanner
+
+tile.warpdrive.weapon.laser_camera.name=Laser und Kamera
+tile.warpdrive.weapon.weapon_controller.name=Waffen Steuerung
+
+
+
+tile.warpdrive.hull.basic.plain.white.name=Weißer Standard Rumpf
+tile.warpdrive.hull.basic.plain.orange.name=Oranger Standard Rumpf
+tile.warpdrive.hull.basic.plain.magenta.name=Magenta Standard Rumpf
+tile.warpdrive.hull.basic.plain.lightBlue.name=Hellblauer Standard Rumpf
+tile.warpdrive.hull.basic.plain.yellow.name=Gelber Standard Rumpf
+tile.warpdrive.hull.basic.plain.lime.name=Hellgrüner Standard Rumpf
+tile.warpdrive.hull.basic.plain.pink.name=Rosa Standard Rumpf
+tile.warpdrive.hull.basic.plain.gray.name=Grauer Standard Rumpf
+tile.warpdrive.hull.basic.plain.silver.name=Silberner Standard Rumpf
+tile.warpdrive.hull.basic.plain.cyan.name=Cyan Standard Rumpf
+tile.warpdrive.hull.basic.plain.purple.name=Lila Standard Rumpf
+tile.warpdrive.hull.basic.plain.blue.name=Blauer Standard Rumpf
+tile.warpdrive.hull.basic.plain.brown.name=Brauner Standard Rumpf
+tile.warpdrive.hull.basic.plain.green.name=Grüner Standard Rumpf
+tile.warpdrive.hull.basic.plain.red.name=Roter Standard Rumpf
+tile.warpdrive.hull.basic.plain.black.name=Schwarzer Standard Rumpf
+
+tile.warpdrive.hull.basic.glass.white.name=Weißer Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.orange.name=Oranger Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.magenta.name=Magenta Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.lightBlue.name=Hellblauer Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.yellow.name=Gelber Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.lime.name=Hellgrüner Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.pink.name=Rosa Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.gray.name=Grauer Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.silver.name=Silberner Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.cyan.name=Cyan Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.purple.name=Lila Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.blue.name=Blauer Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.brown.name=Brauner Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.green.name=Grüner Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.red.name=Roter Standard Glasrumpf
+tile.warpdrive.hull.basic.glass.black.name=Schwarzer Standard Glasrumpf
+
+tile.warpdrive.hull.basic.omnipanel.white.name=Weiße Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.orange.name=Orange Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.magenta.name=Magenta Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.lightBlue.name=Hellblaue Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.yellow.name=Gelbe Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.lime.name=Hellgrüne Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.pink.name=Rosa Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.gray.name=Graue Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.silver.name=Silberne Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.cyan.name=Cyan Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.purple.name=Lila Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.blue.name=Blaue Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.brown.name=Braune Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.green.name=Grüne Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.red.name=Rote Standard Omnipanel
+tile.warpdrive.hull.basic.omnipanel.black.name=Schwarze Standard Omnipanel
+
+tile.warpdrive.hull.basic.slab.white.name=Weiße Standard Stufe
+tile.warpdrive.hull.basic.slab.orange.name=Orange Standard Stufe
+tile.warpdrive.hull.basic.slab.magenta.name=Magenta Standard Stufe
+tile.warpdrive.hull.basic.slab.lightBlue.name=Hellblaue Standard Stufe
+tile.warpdrive.hull.basic.slab.yellow.name=Gelbe Standard Stufe
+tile.warpdrive.hull.basic.slab.lime.name=Hellgrüne Standard Stufe
+tile.warpdrive.hull.basic.slab.pink.name=Rosa Standard Stufe
+tile.warpdrive.hull.basic.slab.gray.name=Graue Standard Stufe
+tile.warpdrive.hull.basic.slab.silver.name=Silberne Standard Stufe
+tile.warpdrive.hull.basic.slab.cyan.name=Cyan Standard Stufe
+tile.warpdrive.hull.basic.slab.purple.name=Lila Standard Stufe
+tile.warpdrive.hull.basic.slab.blue.name=Blaue Standard Stufe
+tile.warpdrive.hull.basic.slab.brown.name=Braune Standard Stufe
+tile.warpdrive.hull.basic.slab.green.name=Grüne Standard Stufe
+tile.warpdrive.hull.basic.slab.red.name=Rote Standard Stufe
+tile.warpdrive.hull.basic.slab.black.name=Schwarze Standard Stufe
+
+tile.warpdrive.hull.basic.stairs.white.name=Weiße Standard Treppe
+tile.warpdrive.hull.basic.stairs.orange.name=Orange Standard Treppe
+tile.warpdrive.hull.basic.stairs.magenta.name=Magenta Standard Treppe
+tile.warpdrive.hull.basic.stairs.lightBlue.name=Hellblaue Standard Treppe
+tile.warpdrive.hull.basic.stairs.yellow.name=Gelbe Standard Treppe
+tile.warpdrive.hull.basic.stairs.lime.name=Hellgrüne Standard Treppe
+tile.warpdrive.hull.basic.stairs.pink.name=Rosa Standard Treppe
+tile.warpdrive.hull.basic.stairs.gray.name=Graue Standard Treppe
+tile.warpdrive.hull.basic.stairs.silver.name=Silberne Standard Treppe
+tile.warpdrive.hull.basic.stairs.cyan.name=Cyan Standard Treppe
+tile.warpdrive.hull.basic.stairs.purple.name=Lila Standard Treppe
+tile.warpdrive.hull.basic.stairs.blue.name=Blaue Standard Treppe
+tile.warpdrive.hull.basic.stairs.brown.name=Braune Standard Treppe
+tile.warpdrive.hull.basic.stairs.green.name=Grüne Standard Treppe
+tile.warpdrive.hull.basic.stairs.red.name=Rote Standard Treppe
+tile.warpdrive.hull.basic.stairs.black.name=Schwarze Standard Treppe
+
+
+tile.warpdrive.hull.advanced.plain.white.name=Weißer weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.orange.name=Oranger weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.magenta.name=Magenta weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.lightBlue.name=Hellblauer weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.yellow.name=Gelber weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.lime.name=Hellgrüner weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.pink.name=Rosa weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.gray.name=Grauer weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.silver.name=Silberner weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.cyan.name=Cyan weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.purple.name=Lila weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.blue.name=Blauer weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.brown.name=Brauner weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.green.name=Grüner weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.red.name=Roter weiterentwickelter Rumpf
+tile.warpdrive.hull.advanced.plain.black.name=Schwarzer weiterentwickelter Rumpf
+
+tile.warpdrive.hull.advanced.glass.white.name=Weißer weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.orange.name=Oranger weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.magenta.name=Magenta weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.lightBlue.name=Hellblauer weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.yellow.name=Gelber weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.lime.name=Hellgrüner weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.pink.name=Rosa weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.gray.name=Grauer weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.silver.name=Silberner weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.cyan.name=Cyan weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.purple.name=Lila weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.blue.name=Blauer weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.brown.name=Brauner weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.green.name=Grüner weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.red.name=Roter weiterentwickelter Glasrumpf
+tile.warpdrive.hull.advanced.glass.black.name=Schwarzer weiterentwickelter Glasrumpf
+
+tile.warpdrive.hull.advanced.omnipanel.white.name=Weiße weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.orange.name=Orange weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.magenta.name=Magenta weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.lightBlue.name=Hellblaue weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.yellow.name=Gelbe weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.lime.name=Hellgrüne weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.pink.name=Rosa weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.gray.name=Graue weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.silver.name=Silberne weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.cyan.name=Cyan weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.purple.name=Lila weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.blue.name=Blaue weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.brown.name=Braune weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.green.name=Grüne weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.red.name=Rote weiterentwickelte Omnipanel
+tile.warpdrive.hull.advanced.omnipanel.black.name=Schwarze weiterentwickelte Omnipanel
+
+tile.warpdrive.hull.advanced.slab.white.name=Weiße weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.orange.name=Orange weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.magenta.name=Magenta weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.lightBlue.name=Hellblaue weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.yellow.name=Gelbe weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.lime.name=Hellgrüne weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.pink.name=Rosa weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.gray.name=Graue weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.silver.name=Silberne weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.cyan.name=Cyan weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.purple.name=Lila weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.blue.name=Blaue weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.brown.name=Braune weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.green.name=Grüne weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.red.name=Rote weiterentwickelte Stufe
+tile.warpdrive.hull.advanced.slab.black.name=Schwarze weiterentwickelte Stufe
+
+tile.warpdrive.hull.advanced.stairs.white.name=Weiße weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.orange.name=Orange weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.magenta.name=Magenta weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.lightBlue.name=Hellblaue weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.yellow.name=Gelbe weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.lime.name=Hellgrüne weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.pink.name=Rosa weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.gray.name=Graue weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.silver.name=Silberne weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.cyan.name=Cyan weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.purple.name=Lila weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.blue.name=Blaue weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.brown.name=Braune weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.green.name=Grüne weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.red.name=Rote weiterentwickelte Treppe
+tile.warpdrive.hull.advanced.stairs.black.name=Schwarze weiterentwickelte Treppe
+
+
+tile.warpdrive.hull.superior.plain.white.name=Weißer überlegener Rumpf
+tile.warpdrive.hull.superior.plain.orange.name=Oranger überlegener Rumpf
+tile.warpdrive.hull.superior.plain.magenta.name=Magenta überlegener Rumpf
+tile.warpdrive.hull.superior.plain.lightBlue.name=Hellblauer überlegener Rumpf
+tile.warpdrive.hull.superior.plain.yellow.name=Gelber überlegener Rumpf
+tile.warpdrive.hull.superior.plain.lime.name=Lime überlegener Rumpf
+tile.warpdrive.hull.superior.plain.pink.name=Rosa überlegener Rumpf
+tile.warpdrive.hull.superior.plain.gray.name=Grauer überlegener Rumpf
+tile.warpdrive.hull.superior.plain.silver.name=Silberner überlegener Rumpf
+tile.warpdrive.hull.superior.plain.cyan.name=Cyan überlegener Rumpf
+tile.warpdrive.hull.superior.plain.purple.name=Lila überlegener Rumpf
+tile.warpdrive.hull.superior.plain.blue.name=Blauer überlegener Rumpf
+tile.warpdrive.hull.superior.plain.brown.name=Brauner überlegener Rumpf
+tile.warpdrive.hull.superior.plain.green.name=Grüner überlegener Rumpf
+tile.warpdrive.hull.superior.plain.red.name=Roter überlegener Rumpf
+tile.warpdrive.hull.superior.plain.black.name=Schwarzer überlegener Rumpf
+
+tile.warpdrive.hull.superior.glass.white.name=Weißer überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.orange.name=Oranger überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.magenta.name=Magenta überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.lightBlue.name=Hellblauer überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.yellow.name=Gelber überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.lime.name=Lime überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.pink.name=Rosa überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.gray.name=Grauer überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.silver.name=Silberner überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.cyan.name=Cyan überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.purple.name=Lila überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.blue.name=Blauer überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.brown.name=Brauner überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.green.name=Grüner überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.red.name=Roter überlegener Glasrumpf
+tile.warpdrive.hull.superior.glass.black.name=Schwarzer überlegener Glasrumpf
+
+tile.warpdrive.hull.superior.omnipanel.white.name=Weiße überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.orange.name=Orange überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.magenta.name=Magenta überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.lightBlue.name=Hellblaue überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.yellow.name=Gelbe überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.lime.name=Hellgrüne überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.pink.name=Rosa überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.gray.name=Graue überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.silver.name=Silberne überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.cyan.name=Cyan überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.purple.name=Lila überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.blue.name=Blaue überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.brown.name=Braune überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.green.name=Grüne überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.red.name=Rote überlegene Omnipanel
+tile.warpdrive.hull.superior.omnipanel.black.name=Schwarze überlegene Omnipanel
+
+tile.warpdrive.hull.superior.slab.white.name=Weiße überlegene Stufe
+tile.warpdrive.hull.superior.slab.orange.name=Orange überlegene Stufe
+tile.warpdrive.hull.superior.slab.magenta.name=Magenta überlegene Stufe
+tile.warpdrive.hull.superior.slab.lightBlue.name=Hellblaue überlegene Stufe
+tile.warpdrive.hull.superior.slab.yellow.name=Gelbe überlegene Stufe
+tile.warpdrive.hull.superior.slab.lime.name=Hellgrüne überlegene Stufe
+tile.warpdrive.hull.superior.slab.pink.name=Rosa überlegene Stufe
+tile.warpdrive.hull.superior.slab.gray.name=Graue überlegene Stufe
+tile.warpdrive.hull.superior.slab.silver.name=Silberne überlegene Stufe
+tile.warpdrive.hull.superior.slab.cyan.name=Cyan überlegene Stufe
+tile.warpdrive.hull.superior.slab.purple.name=Lila überlegene Stufe
+tile.warpdrive.hull.superior.slab.blue.name=Blaue überlegene Stufe
+tile.warpdrive.hull.superior.slab.brown.name=Braune überlegene Stufe
+tile.warpdrive.hull.superior.slab.green.name=Grüne überlegene Stufe
+tile.warpdrive.hull.superior.slab.red.name=Rote überlegene Stufe
+tile.warpdrive.hull.superior.slab.black.name=Schwarze überlegene Stufe
+
+tile.warpdrive.hull.superior.stairs.white.name=Weiße überlegene Treppe
+tile.warpdrive.hull.superior.stairs.orange.name=Orange überlegene Treppe
+tile.warpdrive.hull.superior.stairs.magenta.name=Magenta überlegene Treppe
+tile.warpdrive.hull.superior.stairs.lightBlue.name=Hellblaue überlegene Treppe
+tile.warpdrive.hull.superior.stairs.yellow.name=Gelbe überlegene Treppe
+tile.warpdrive.hull.superior.stairs.lime.name=Hellgrüne überlegene Treppe
+tile.warpdrive.hull.superior.stairs.pink.name=Rosa überlegene Treppe
+tile.warpdrive.hull.superior.stairs.gray.name=Graue überlegene Treppe
+tile.warpdrive.hull.superior.stairs.silver.name=Silberne überlegene Treppe
+tile.warpdrive.hull.superior.stairs.cyan.name=Cyan überlegene Treppe
+tile.warpdrive.hull.superior.stairs.purple.name=Lila überlegene Treppe
+tile.warpdrive.hull.superior.stairs.blue.name=Blaue überlegene Treppe
+tile.warpdrive.hull.superior.stairs.brown.name=Braune überlegene Treppe
+tile.warpdrive.hull.superior.stairs.green.name=Grüne überlegene Treppe
+tile.warpdrive.hull.superior.stairs.red.name=Rote überlegene Treppe
+tile.warpdrive.hull.superior.stairs.black.name=Schwarze überlegene Treppe
+
+
+warpdrive.guide.prefix=%1$s: 
+warpdrive.error.bad_tile_entity=Dieser Block benötigt ein Update, durch zerstören und neu setzen.
+warpdrive.error.internal_check_console=Internal error, check console for details
+
+warpdrive.command.invalid_parameter=Invalid parameter %1$s
+warpdrive.command.invalid_location=Unknown world or coordinates, probably an invalid command sender in action here.
+warpdrive.command.no_container=No container found around player
+warpdrive.command.empty_inventory=Inventory is empty
+warpdrive.command.found_title=Found:
+warpdrive.command.found_line=- %1$s
+warpdrive.command.no_matching_entity=No matching entity found within %1$d blocks
+warpdrive.command.x_matching_entities=%1$d matching entities within %2$d blocks:
+warpdrive.command.only_in_space=This structure is only allowed in space!
+warpdrive.command.configuration_reloaded=WarpDrive configuration has been reloaded.
+warpdrive.command.liability_warning=Use at your own risk!
+warpdrive.command.player_required=Use as a player or provide a player name!
+warpdrive.command.player_not_found=Player not found '%1$s'
+warpdrive.command.too_many_arguments=Too many arguments %1$d
+warpdrive.command.player_in_unknown_dimension=Player %1$s is in unknown dimension %2$d.
+warpdrive.command.player_can_t_go_virtual=Player %1$s can't go to %2$s: this is a decorative/virtual celestial object!
+warpdrive.command.specify_explicit_dimension=Try specifying an explicit target dimension instead.
+warpdrive.command.undefined_dimension=Undefined dimension %1$d
+warpdrive.command.teleporting_to_x=Teleporting to %1$s
+warpdrive.command.teleporting_player_x_to_y=Teleporting player %1$s to %2$s
+warpdrive.command.teleporting_by_x_to_y=%1$s is teleporting you to %2$s
+warpdrive.command.no_bed_to_teleport_to_self=Teleportation failed:\nyou need to set your bed location in %1$s
+warpdrive.command.no_bed_to_teleport_to_other=Teleportation failed for player %1$s:\nplayer needs to set his/her bed location in %2$s
+warpdrive.command.lost_bed_can_t_teleport_self=Teleportation failed:\nyour bed is no longer there in %1$s
+warpdrive.command.lost_bed_can_t_teleport_other=Teleportation failed for player %1$s:\nbed is no longer there in %2$s
+
+
+warpdrive.beam_frequency.tooltip=Strahlfrequenz auf %1$d gestellt.
+warpdrive.beam_frequency.get=Strahlfrequenz %2$d wurde von %1$s abgerufen.
+warpdrive.beam_frequency.set=%1$s ist jetzt mit Strahlfrequenz %2$d verknüpft.
+warpdrive.beam_frequency.status_line.valid=Strahlfrequenz %1$d ist gültig.
+warpdrive.beam_frequency.status_line.invalid=Strahlfrequenz %1$d ist ungültig.
+warpdrive.beam_frequency.status_line.undefined=Undefinierte Strahlfrequenz.\n§bNutze eine Stimmgabel§f um die Strahlfrequenz festzulegen.
+
+warpdrive.control_channel.tooltip=Steuerungskanal auf %1$d gestellt.
+warpdrive.control_channel.get=Steuerungskanal %2$d wurde von %1$s abgerufen.
+warpdrive.control_channel.set=%1$s ist jetzt auf Steuerungskanal %2$d gestellt.
+warpdrive.control_channel.status_line.valid=Steuerungskanal %1$d ist gültig.
+warpdrive.control_channel.status_line.invalid=Steuerungskanal %1$d ist ungültig.
+warpdrive.control_channel.status_line.undefined=Nicht definierter Steuerungskanal.\n§bNutze eine Stimmgabel§r um ihn einzustellen.
+
+warpdrive.machine.is_enabled.set.enabled=Switched ON!
+warpdrive.machine.is_enabled.set.disabled=Switched off!
+warpdrive.machine.is_enabled.get.disabled=System is off.
+warpdrive.machine.is_enabled.get.enabled=System is ON.
+
+# %1 is signature name, %2 is item name, %3 is block name
+warpdrive.core_signature.tooltip=Signature is set to %1$d
+warpdrive.core_signature.get_missing=%3$s has no signature yet!
+warpdrive.core_signature.get_same=%2$s is already linked to %1$s.
+warpdrive.core_signature.get=%2$s is now linked to %1$s.
+warpdrive.core_signature.set_not_supported=You can't change the signature of a %3$s.
+warpdrive.core_signature.set_missing=%2$s needs to be linked first!
+warpdrive.core_signature.set_same=%3$s is already linked to %1$s.
+warpdrive.core_signature.set=%3$s is now linked to %1$s.
+warpdrive.core_signature.status_line.defined=Signature is %1$d.\n§bRight-click a remote controller§r to apply this signature.
+warpdrive.core_signature.status_line.undefined=Undefined signature.\n§bSneak right-click§r a core or controller to set it.
+warpdrive.core_signature.status_line.unknown_core_signature=Unknown core signature!
+warpdrive.core_signature.status_line.world_not_loaded=Core world is not loaded!
+
+warpdrive.tooltip.item_tag.breathing_helmet=§bRaumatmung§r verbraucht Luftkanister oder IC2 Druckluftzellen.
+warpdrive.tooltip.item_tag.fly_in_space=§bRaumtaugliches Jetpack§r.
+warpdrive.tooltip.item_tag.no_fall_damage=§bAbsorbiert Fallschaden§r.
+
+
+warpdrive.upgrade.description.base.computer_interface=Enables computer connection.
+warpdrive.upgrade.description.chunk_loader.efficiency=Reduces energy cost.
+warpdrive.upgrade.description.chunk_loader.range=Increases maximum range.
+warpdrive.upgrade.description.mining_laser.pumping=Enables fluid removal.
+warpdrive.upgrade.description.cloaking.transparency=Enables full transparency.
+warpdrive.upgrade.description.capacitor.efficiency=Reduces energy transfer loss.
+warpdrive.upgrade.description.transporter.energy_storage=Increases energy storage.
+warpdrive.upgrade.description.transporter.focus=Increases locking speed.
+warpdrive.upgrade.description.transporter.range=Increases maximum range.
+
+warpdrive.upgrade.description.force_field.attraction=Pulls item drops for storage.
+warpdrive.upgrade.description.force_field.breaking=Breaks blocks.
+warpdrive.upgrade.description.force_field.camouflage=Disguises as another block.
+warpdrive.upgrade.description.force_field.cooling=Freezes blocks & entities.
+warpdrive.upgrade.description.force_field.fusion=Merges force fields.
+warpdrive.upgrade.description.force_field.heating=Heats up blocks and entities.
+warpdrive.upgrade.description.force_field.inversion=Changes to volume area.
+warpdrive.upgrade.description.force_field.item_port=Interfaces with storages.
+warpdrive.upgrade.description.force_field.pumping=Pumps fluids.
+warpdrive.upgrade.description.force_field.range=Increases maximum size.
+warpdrive.upgrade.description.force_field.repulsion=Pushs entities & items out.
+warpdrive.upgrade.description.force_field.rotation=Enables rotation.
+warpdrive.upgrade.description.force_field.shock=Electrifies blocks & entities.
+warpdrive.upgrade.description.force_field.silencer=Silences the block.
+warpdrive.upgrade.description.force_field.speed=Increases projection speed.
+warpdrive.upgrade.description.force_field.stabilization=Places blocks.
+warpdrive.upgrade.description.force_field.thickness=Increases thickness.
+warpdrive.upgrade.description.force_field.translation=Enables translation.
+
+warpdrive.upgrade.result.no_upgrade_to_dismount=Kein Upgrade zum deinstallieren vorhanden.
+warpdrive.upgrade.result.not_enough_upgrades=Du brauchst mindestens 1 Item um diesen Block aufzuwerten.
+warpdrive.upgrade.result.invalid_upgrade=Dies ist kein gültiges Item, um diesen Block upzugraden.
+warpdrive.upgrade.result.invalid_upgrade_for_projector=Dieses Upgrade ist zu groß für einen Projektor. Nutze ein Relais.
+warpdrive.upgrade.result.invalid_upgrade_for_relay=Dieses Upgrade funktioniert nur bei Projektoren!
+warpdrive.upgrade.result.valid_upgrades=Gültige Upgrades für diesen Block sind: %1$s. @TODO noch nicht implementiert
+warpdrive.upgrade.result.too_many_upgrades=Es sind schon %1$d Upgrades installiert.
+warpdrive.upgrade.result.dismounted=Upgrade %1$s erfolgreich deinstalliert.
+warpdrive.upgrade.result.mounted=Upgrade %1$s erfolgreich installiert.
+warpdrive.upgrade.result.spawn_denied=Spawn denied for %1$s.
+
+warpdrive.upgrade.result.wrong_shape_side=Auf dieser Seite gibt es keinen Elektromagnetischen Projektor.
+warpdrive.upgrade.result.no_shape_to_dismount=Keine Form zum deinstallieren vorhanden.
+warpdrive.upgrade.result.not_enough_shapes.double=Du brauchst mindestens 2 Items um einen doppelseitigen Projektor einzustellen.
+warpdrive.upgrade.result.not_enough_shapes.single=Du brauchst mindestens 1 Item um einen einseitigen Projektor einzustellen.
+warpdrive.upgrade.result.shape_dismounted=Form erfolgreich deinstalliert.
+warpdrive.upgrade.result.shape_mounted=Form erfolgreich installiert.
+
+warpdrive.upgrade.status_line.upgradeable=Hold %1$s for upgrades.
+warpdrive.upgrade.status_line.header=Upgrades:
+
+
+warpdrive.video_channel.tooltip=Videokanal auf %1$d gestellt.
+warpdrive.video_channel.get=Videokanal %2$d wurde von %1$s abgerufen.
+warpdrive.video_channel.set=%1$s ist jetzt auf Videokanal %2$d gestellt.
+warpdrive.video_channel.status_line.valid_self=Videokanal %1$d ist gültig.
+warpdrive.video_channel.status_line.valid_other=Videokanal %1$d ist gültig für die Kamera %2$s.
+warpdrive.video_channel.status_line.invalid=Videokanal %1$d ist ungültig.
+warpdrive.video_channel.status_line.not_loaded=Videokanal %1$d ist ungültig oder die Kamera ist zu weit weg!
+warpdrive.video_channel.status_line.undefined=Nicht definierter Videokanal.\n§bNutze eine Stimmgabel§r um ihn einzustellen.
+
+
+warpdrive.accelerator.guide.low_power.not_enough_storage=Energiespeicher zu klein; wir brauchen mindestens %1$d %3$s um den Betrieb fortzusetzen, können aber nur %2$d %3$s speichern.
+warpdrive.accelerator.guide.low_power.accelerating=Uns geht der Strom aus (%1$s > %2$s %3$s), Chef, Teilchen werden frei, auf massiven Strahlungsaustritt vorbereiten!
+warpdrive.accelerator.guide.low_power.no_particles=Wir brauchen mehr Strom um den Beschleuniger zu starten!
+warpdrive.accelerator.guide.no_chiller=Für diesen Beschleuniger konnte kein Kühler gefunden werden!
+warpdrive.accelerator.status_line.missing_void_shell_connection=Missing void shell connection.
+warpdrive.accelerator.status_line.invalid_double_junction=Invalid void shell with double junction at %1$s.
+warpdrive.accelerator.status_line.invalid_vertical_junction=Invalid void shell with vertical movement at %1$s.
+warpdrive.accelerator.status_line.missing_turning_magnet=Missing main magnets at turning point %1$s.
+warpdrive.accelerator.status_line.missing_main_magnets=Missing main magnets at control point %1$s.
+warpdrive.accelerator.status_line.missing_corner_magnets=Missing corner magnets at control point %1$s.
+warpdrive.accelerator.status_line.missing_collider_block=Missing Particles collider block at %1$s.
+warpdrive.accelerator.status_line.missing_void_shell=Missing void shell at %1$s.
+warpdrive.accelerator.status_line.too_many_void_shells=Too many void shells at %1$s.
+warpdrive.accelerator.status_line.invalid_error_code=Invalid accelerator error code %1$d at %2$s, please report to mod author.
+warpdrive.accelerator.status_line.missing_basic_chiller=Missing basic chiller.
+warpdrive.accelerator.status_line.missing_advanced_chiller=Missing advanced chiller.
+warpdrive.accelerator.status_line.missing_superior_chiller=Missing superior chiller.
+warpdrive.accelerator.status_line.missing_injector=Missing accelerator injector node.
+warpdrive.accelerator.status_line.missing_collider_node=Missing accelerator collider node.
+
+warpdrive.breathing.alarm=Atemalarm
+warpdrive.breathing.invalid_setup=Kein Atemhelm und/oder unvollständige Rüstung
+warpdrive.breathing.low_reserve=Luftreserve niedrig!
+warpdrive.breathing.no_air=Keine Luft mehr!
+
+warpdrive.builder.guide.deploying_out_of_range=Cannot deploy ship more than %1$d blocks away from ship scanner.
+warpdrive.builder.guide.deployment_area_occupied_by_blocks=Unable to deploy! Area is already occupied by %1$d blocks.
+warpdrive.builder.guide.deploying_ship=Deploying ship '%1$s'...
+warpdrive.builder.guide.deployment_area_occupied_by_block=Unable to deploy new ship at (%2$d %3$d %4$d)!\nArea is already occupied by %1$s.
+warpdrive.builder.guide.deployment_area_corrupted_tile_entity=Deployment area occupied with invalid tile entity %1$s for ship core.
+warpdrive.builder.guide.contact_an_admin=Contact an admin for help %1$s.
+warpdrive.builder.guide.deployment_area_with_active_crew=Deployment area occupied by active crew %s.
+warpdrive.builder.guide.wait_your_turn=Please wait or use another deployment spot.
+warpdrive.builder.guide.deployment_area_is_busy=Deployment area is busy.
+warpdrive.builder.guide.deployment_area_occupied_by_your_ship1=Deployment area occupied by your ship, captain %1$s!
+warpdrive.builder.guide.deployment_area_occupied_by_your_ship2=Come back inside and use the computer to jump away.
+warpdrive.builder.guide.deployment_area_occupied_by_online_player1=Deployment area occupied with ship owned by %1$s!
+warpdrive.builder.guide.deployment_area_occupied_by_online_player2=Contact that player or use another deployment spot.
+
+warpdrive.builder.guide.too_many_players=Too many players detected: please stand in the beam one at a time.
+warpdrive.builder.guide.no_ship_token=Please come back once you've a Ship token.
+warpdrive.builder.guide.ship_token_detected=Ship token '%1$s' detected!
+warpdrive.builder.guide.ship_materialization_countdown=Stand by for ship materialization in %2$d...
+warpdrive.builder.guide.ship_deployed=Ship deployed. Teleporting captain to the main deck...
+warpdrive.builder.guide.welcome_aboard=Welcome aboard captain! Use the computer to get moving...
+
+warpdrive.builder.status_line.no_ship_core_in_range=No ship core in range.
+warpdrive.builder.status_line.ship_is_higher_tier=%1$s is too advanced for %2$s.
+
+warpdrive.cloaking_core.missing_channeling_and_projecting_coils=Integrity down to %1$d%%: missing channeling coil(s) towards %2$s and projecting coil(s) towards %3$s !!!
+warpdrive.cloaking_core.missing_channeling_coils=Integrity down to %1$d%%: missing channeling coil(s) towards %2$s !!!
+warpdrive.cloaking_core.missing_projecting_coils=Integrity down to %1$d%%: missing projecting coil(s) towards %2$s !!!
+warpdrive.cloaking_core.valid=System is valid !!!
+warpdrive.cloaking_core.disabled=Tarnfeld ist deaktiviert!
+warpdrive.cloaking_core.low_power=Tarnfeld ist ausgefallen, wir brauchen mehr Energie, Captain!
+warpdrive.cloaking_core.cloaking=Ein Stufe %1$d Tarnfeld überdeckt jetzt %2$d Blöcke!
+
+warpdrive.compat.guide.block_detected_on_board=%1$s detected on board!
+warpdrive.compat.guide.quantum_field_interference=Quantum field interference detected!
+warpdrive.compat.guide.draconic_evolution_portal=Portal detected!
+warpdrive.compat.guide.stargate_is_active=Stargate is active (%1$s)!
+
+warpdrive.enan_reactor.status_line.missing_reactor_core=Missing Enantiomorphic reactor core.
+warpdrive.enan_reactor.status_line.missing_stabilization_laser=Missing stabilization laser %1$d.
+warpdrive.enan_reactor.status_line.non_air_block=Non-air block detected %1$d.
+
+warpdrive.energy.status_line.charge=Charge ist
+warpdrive.energy.status_line.input_rate=Input rate is
+warpdrive.energy.status_line.output_rate=Output rate is
+warpdrive.energy.side.changed_to_input=%1$s Seite auf Energiezufuhr Modus gestellt!
+warpdrive.energy.side.changed_to_output=%1$s Seite auf Energieausgabe Modus gestellt!
+warpdrive.energy.side.changed_to_disabled=%1$s Seite auf Deaktiviert gestellt!
+
+warpdrive.force_field.guide.low_power=Uns geht die Energie aus, Captain. Verringere unseren Energieverbrauch oder hol den schottischen Ingenieur!
+
+warpdrive.force_field.shape.status_line.none=Form ist nicht definiert
+warpdrive.force_field.shape.status_line.double=Die Form ist ein(e) volle(r) %1$s
+warpdrive.force_field.shape.status_line.single=Die Form ist ein(e) halbe(r) %1$s
+warpdrive.force_field.shape.status_line.sphere=Kugel
+warpdrive.force_field.shape.status_line.cylinder_h=Horizontaler Zylinder
+warpdrive.force_field.shape.status_line.cylinder_v=Vertikaler Zylinder
+warpdrive.force_field.shape.status_line.cube=Würfel
+warpdrive.force_field.shape.status_line.plane=Ebene
+warpdrive.force_field.shape.status_line.tube=Röhre
+warpdrive.force_field.shape.status_line.tunnel=Tunnel
+
+warpdrive.ic2_reactor_laser_cooler.no_reactor=Kein Reaktor gefunden!
+warpdrive.ic2_reactor_laser_cooler.reactor_found=Reactor connected on %1$s.
+
+warpdrive.laser.status_line.missing_laser_medium=No laser medium detected, valid sides are %1$d.
+
+warpdrive.laser_tree_farm.status_line.idle=IDLE (not farming)
+warpdrive.laser_tree_farm.status_line.warming_up=Warming up...
+warpdrive.laser_tree_farm.status_line.scanning_all=Scanning all
+warpdrive.laser_tree_farm.status_line.scanning_logs=Scanning logs
+warpdrive.laser_tree_farm.status_line.harvesting_all=Harvesting all
+warpdrive.laser_tree_farm.status_line.harvesting_logs=Harvesting logs
+warpdrive.laser_tree_farm.status_line.harvesting_all_with_silktouch=Harvesting all with silktouch
+warpdrive.laser_tree_farm.status_line.harvesting_logs_with_silktouch=Harvesting logs with silktouch
+warpdrive.laser_tree_farm.status_line.tapping_all=Tapping trees, harvesting all
+warpdrive.laser_tree_farm.status_line.tapping_logs=Tapping trees, harvesting logs
+warpdrive.laser_tree_farm.status_line.tapping_all_with_silktouch=Tapping trees, harvesting all with silktouch
+warpdrive.laser_tree_farm.status_line.tapping_logs_with_silktouch=Tapping trees, harvesting logs with silktouch
+warpdrive.laser_tree_farm.status_line.planting=Planting saplings and crops
+warpdrive.laser_tree_farm.status_line._insufficient_energy= - Out of energy
+
+warpdrive.mining_laser.status_line.idle=IDLE (not mining)
+warpdrive.mining_laser.status_line.warming_up=Warming up...
+warpdrive.mining_laser.status_line.scanning_all=Scanning all
+warpdrive.mining_laser.status_line.scanning_ores=Scanning ores
+warpdrive.mining_laser.status_line.mining_all=Mining all
+warpdrive.mining_laser.status_line.mining_ores=Mining ores
+warpdrive.mining_laser.status_line.mining_all_with_silktouch=Mining all with silktouch
+warpdrive.mining_laser.status_line.mining_ores_with_silktouch=Mining ores with silktouch
+warpdrive.mining_laser.status_line._insufficient_energy= - Out of energy
+
+warpdrive.monitor.viewing_camera=Kamera bei %2$d, %3$d, %4$d läuft auf Videokanal %1$d
+
+warpdrive.particle.ion.name=Ion
+warpdrive.particle.ion.tooltip=Erzeugt durch Kollision eines Partikelhaufens in einem Standard Beschleuniger
+warpdrive.particle.proton.name=Proton
+warpdrive.particle.proton.tooltip=Erzeugt durch Kollision eines Partikelhaufens in einem Weiterentwickelten Beschleuniger
+warpdrive.particle.antimatter.name=Antimaterie
+warpdrive.particle.antimatter.tooltip=Erzeugt durch Kollision eines Partikelhaufens in einem Überlegenen Beschleuniger
+warpdrive.particle.strange_matter.name=Seltsame Materie
+warpdrive.particle.strange_matter.tooltip=Erzeugt durch Kollision zweier Partikelhaufen in einem Überlegenen Beschleuniger
+
+warpdrive.security_station.guide.registered_players=Verbundene Spieler: %1$s
+warpdrive.security_station.guide.player_registered=You're now registered on this security station.\nRegistered players are %1$s
+warpdrive.security_station.guide.player_unregistered=You've been unregistered from this security station.\nAttached players are %1$s
+
+# Note for translators: you want to keep each line shorter than 50 characters so that it fits on computer screens.
+warpdrive.ship.guide.cooling_countdown=Ship core is cooling down... %1$d s to go...
+warpdrive.ship.guide.pre_jumping=Running pre-jump checklist...
+warpdrive.ship.guide.warming_up=Ship core is warming up... %1$d s to go...
+warpdrive.ship.guide.movement_aborted=Movement aborted!
+warpdrive.ship.guide.insufficient_energy=Insufficient energy in core.
+warpdrive.ship.guide.warp_field_overlapping=Own warp field contains another ship.\nDisable ship core %1$s to continue.
+warpdrive.ship.guide.cloaking_field_overlapping=Core is cloaked.\nDisable cloak to continue.
+warpdrive.ship.guide.pre_jump_success=Ok
+warpdrive.ship.guide.no_dimension_set=Ship has no dimension set yet.
+warpdrive.ship.guide.too_large_side_for_tier=Ship is too large, max is %1$d m per side.\nUpgrade ship core or reduce span.
+warpdrive.ship.guide.too_much_mass_for_planet=Ship is too big for a planet.\nReduce your mass to %1$d t or less.
+warpdrive.ship.guide.insufficient_mass_for_tier=Ship is too light, min is %1$d t.\nDowngrade ship core or increase mass.
+warpdrive.ship.guide.too_much_mass_for_tier=Ship is too heavy, max is %1$d t.\nUpgrade ship core or reduce your mass.
+warpdrive.ship.guide.insufficient_mass_for_hyperspace=Ship is too light to engage Alcubierre drive.\nIncrease your mass to %1$d t or more.
+warpdrive.ship.guide.jumpgate_is_too_far=Ship is not inside a jumpgate.
+warpdrive.ship.guide.jumpgate_partially_entered=Ship is only %.1f%% inside a jumpgate.\nSorry, we'll loose too much crew as is.
+warpdrive.ship.guide.jumpgate_not_defined=Destination jumpgate '%1$s' is unknown.
+warpdrive.ship.guide.jumpgate_blocked=Destination gate is blocked by obstacles.
+warpdrive.ship.guide.target_outside_planet_border=Target position is outside planet border!\nWorld borders are (%1$d %2$d %3$d) to (%4$d %5$d %6$d).
+warpdrive.ship.guide.invalid_y_coordinates=Invalid Y coordinate(s), check ship dimensions...
+warpdrive.ship.guide.invalid_state=Invalid state, aborting jump...
+warpdrive.ship.guide.overlapping_source_and_target=Target is too close. Increase jump distance to continue.
+warpdrive.ship.guide.not_enough_space_after_adjustment=Not enough space after adjustment.
+warpdrive.ship.guide.entering_hyperspace=Entering hyperspace...
+warpdrive.ship.guide.leaving_hyperspace=Leaving hyperspace...
+warpdrive.ship.guide.engaging_jumpgate_x=Engaging jumpgate towards %1$s!
+warpdrive.ship.guide.jumping_xyz=Jumping of %1$d blocks (XYZ %2$d %3$d %4$d)
+warpdrive.ship.guide.turning_right=Turning to the right
+warpdrive.ship.guide.turning_back=Turning back
+warpdrive.ship.guide.turning_left=Turning to the left
+warpdrive.ship.guide.anchor_block_detected=On-board anchor block %1$s detected at (%2$d %3$d %4$d).
+warpdrive.ship.guide.anchor_entity_detected=Anchor entity %1$s detected at (%2$d %3$d %4$d).
+warpdrive.ship.guide.block_not_ready_for_jump=On-board block %1$s at (%2$d %3$d %4$d) is not ready.
+warpdrive.ship.guide.ship_snagged1=Ship snagged by %1$s at (%2$d %3$d %4$d).
+warpdrive.ship.guide.ship_snagged2=Sneak right click the ship core to see your ship dimensions, then update your ship dimensions.
+warpdrive.ship.guide.save_exception=Exception while saving ship block %1$s.\nCheck console for details.
+warpdrive.ship.guide.chunkloading_rejected_in_source_world=Chunkloading rejected in source world %1$s.
+warpdrive.ship.guide.too_many_chunks_to_load=Ship extends over %1$d chunks.\nMax is set to %2$d in config/forgeChunkLoading.cfg.
+warpdrive.ship.guide.max_chunkloading=Close the game, update config/forgeChunkLoading.cfg, then try again.
+warpdrive.ship.guide.chunkloading_rejected_in_target_world=Chunkloading rejected in target world %s. Aborting.
+warpdrive.ship.guide.no_celestial_object_in_hyperspace=No star system exists in %1$s (%2$d), there's nowhere to exit hyperspace!
+warpdrive.ship.guide.no_star_system_in_range=Ship won't survive in deep space.\nClosest star system is ~%1$d m away (%2$d %3$d %4$d) to (%5$d %6$d %7$d).
+warpdrive.ship.guide.exception_loading_dimension=Unable to load dimension %1$d.\nCheck console for a missing mod or misconfiguration.
+warpdrive.ship.guide.unable_to_reach_hyperspace_from_planet=Unable to engage Alcubierre drive on a planet.\nGet into orbit, then try again.
+warpdrive.ship.guide.unable_to_reach_hyperspace_no_parent=Current location has no hyperspace connection.\nThere's no parent defined for %1$s (%2$d).
+warpdrive.ship.guide.unable_to_reach_space_no_parent=Current location as no space connection.\nThere's no parent defined for %1$s (%2$d).
+warpdrive.ship.guide.unable_to_reach_space_outside_border=Ship is outside planet border.\nClosest transition area is ~%1$d m away (%2$d %3$d %4$d) to (%5$d %6$d %7$d).
+warpdrive.ship.guide.no_celestial_object_in_space=There's nowhere to land.\nNo planet exists in %1$s (%2$d).
+warpdrive.ship.guide.unable_to_land_outside_orbit=Ship isn't orbiting of planet, unable to land!\nClosest planet is %1$d m away (%2$d %3$d %4$d) to (%5$d %6$d %7$d).
+warpdrive.ship.guide.unable_to_land_virtual_planet=Celestial object %1$s is out of reach.\nIt's either a decorative planet or a server misconfiguration.
+warpdrive.ship.guide.ship_collision=Collision detected around (%1$d %2$d %3$d).\nSend a maintenance team to check for damages!
+warpdrive.ship.guide.impassable_block_detected=Impassable %1$s detected at (%2$d %3$d %4$d).
+warpdrive.ship.guide.obstacle_block_detected=Obstacle %1$s detected at (%2$d %3$d %4$d).
+warpdrive.ship.guide.entering_protected_area=Entering protected area at (%1$d %2$d %3$d).
+warpdrive.ship.guide.moving_too_high=Ship core is moving too high.
+warpdrive.ship.guide.moving_too_low=Ship core is moving too low.
+warpdrive.ship.guide.jump_done=Jump done
+warpdrive.ship.guide.schematic_not_found=Schematic not found or unknown error reading it: '%1$s'.
+warpdrive.ship.guide.schematic_invalid_format=Invalid schematic format: %1$s
+
+warpdrive.ship.status_line.cooling=%1$d s Abklingzeit verbleibend.
+warpdrive.ship.status_line.isolation=%1$d aktive Isolations Blöcke bieten %2$s%% Absorption.
+
+warpdrive.teleportation.guide.no_safe_spot=No safe spot found to summon player %1$s
+
+warpdrive.transporter.status_line.from_to=Von (%1$.0f %2$.0f %3$.0f) zu (%4$.0f %5$.0f %6$.0f)
+warpdrive.transporter.status_line.missing_containment=Missing or invalid containment for scanner %1$s.
+warpdrive.transporter_signature.status_line.invalid=No transporter room linked
+warpdrive.transporter_signature.status_line.valid=Linked to transporter room %1$s\n§8%2$s
+warpdrive.transporter_signature.get_missing=Transporter room has no signature yet!
+warpdrive.transporter_signature.get_same=Transporter beacon is already linked to %1$s.
+warpdrive.transporter_signature.get=Transporter beacon is now linked to %1$s.
+warpdrive.transporter_signature.set_missing=Transporter beacon needs to be linked first!
+warpdrive.transporter_signature.set_self=Transporter room can't target itself!
+warpdrive.transporter_signature.set_same=Transporter room is already linked to %1$s.
+warpdrive.transporter_signature.set=Transporter room is now linked to %1$s.
+
+warpdrive.virtual_assistant.status_line.none=No pending command to process.
+warpdrive.virtual_assistant.status_line.last_command=Last command received was '%1$s'.
+
+warpdrive.world_border.in_range=Proximity alert: world border is only %1$d m away!
+warpdrive.world_border.outside=You're %1$d m outside the world border...
+warpdrive.world_border.portal_denied=Portal opening cancelled to prevent a certain death!
+warpdrive.world_border.reached=You've reached the world border...

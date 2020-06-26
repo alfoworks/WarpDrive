@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+FMLCorePluginContainsFMLMod: true
+FMLAT: warpdrive_at.cfg
+FMLCorePlugin: cr0s.warpdrive.core.FMLLoadingPlugin
+

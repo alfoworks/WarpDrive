@@ -23,6 +23,7 @@ import javax.annotation.Nonnull;
 
 import java.util.Collection;
 
+import cr0s.warpdrive.render.skybox.CustomSkyBoxRenderer;
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
@@ -102,6 +103,8 @@ public class ClientProxy extends CommonProxy {
 		MinecraftForge.EVENT_BUS.register(new RenderOverlayLocation());
 		
 		MinecraftForge.EVENT_BUS.register(new ClientCameraHandler());
+
+		RenderSpaceSky.skyRenderer = new CustomSkyBoxRenderer("blue", "Pure Blue");
 	}
 	
 	@Override
