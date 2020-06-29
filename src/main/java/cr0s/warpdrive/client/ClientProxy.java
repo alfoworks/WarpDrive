@@ -5,6 +5,7 @@ import cr0s.warpdrive.WarpDrive;
 import cr0s.warpdrive.api.IBlockBase;
 import cr0s.warpdrive.api.IItemBase;
 import cr0s.warpdrive.block.breathing.BlockColorAirShield;
+import cr0s.warpdrive.command.ClientCommandSkyBox;
 import cr0s.warpdrive.entity.EntityNPC;
 import cr0s.warpdrive.entity.EntityOfflineAvatar;
 import cr0s.warpdrive.entity.EntityParticleBunch;
@@ -38,6 +39,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.common.MinecraftForge;
@@ -105,7 +107,12 @@ public class ClientProxy extends CommonProxy {
 		
 		MinecraftForge.EVENT_BUS.register(new ClientCameraHandler());
 
-		RenderSpaceSky.skyRenderer = new CustomSkyBoxRenderer("blue", "Pure Blue");
+		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("blue", "Blue"));
+		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("purple", "Purple"));
+		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("red", "Red"));
+		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("pureBlack", "Pure Black"));
+
+		ClientCommandHandler.instance.registerCommand(new ClientCommandSkyBox());
 	}
 	
 	@Override
