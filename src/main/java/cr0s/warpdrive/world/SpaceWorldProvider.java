@@ -38,21 +38,21 @@ public class SpaceWorldProvider extends AbstractWorldProvider {
 		super.init();
 		
 		world.setSeaLevel(0);
-		final int dimension = this.getDimension();
-		System.out.println("WARPDRIVE DIMENSION INFO");
-		System.out.println(dimension);
-		body = new CelestialBody("WarpDrive Space") {
-			@Override
-			public int getID() {
-				return dimension;
-			}
+// 		final int dimension = this.getDimension();
+// 		System.out.println("WARPDRIVE DIMENSION INFO");
+// 		System.out.println(dimension);
+// 		body = new CelestialBody("WarpDrive Space") {
+// 			@Override
+// 			public int getID() {
+// 				return dimension;
+// 			}
 
-			@Override
-			public String getUnlocalizedNamePrefix() {
-				return "WD";
-			}
-		};
-		body.setUnreachable();
+// 			@Override
+// 			public String getUnlocalizedNamePrefix() {
+// 				return "WD";
+// 			}
+// 		};
+// 		body.setUnreachable();
 	}
 	
 	@Nonnull 
