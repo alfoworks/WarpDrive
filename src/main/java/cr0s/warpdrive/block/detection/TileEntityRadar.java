@@ -3,14 +3,8 @@ package cr0s.warpdrive.block.detection;
 import cr0s.warpdrive.Commons;
 import cr0s.warpdrive.WarpDrive;
 import cr0s.warpdrive.block.TileEntityAbstractEnergyConsumer;
-import cr0s.warpdrive.data.CelestialObjectManager;
+import cr0s.warpdrive.data.*;
 import cr0s.warpdrive.config.WarpDriveConfig;
-import cr0s.warpdrive.data.CelestialObject;
-import cr0s.warpdrive.data.EnergyWrapper;
-import cr0s.warpdrive.data.GlobalRegionManager;
-import cr0s.warpdrive.data.RadarEcho;
-import cr0s.warpdrive.data.Vector3;
-import cr0s.warpdrive.data.EnumRadarMode;
 
 import li.cil.oc.api.machine.Arguments;
 import li.cil.oc.api.machine.Callback;
@@ -24,6 +18,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 
+import net.minecraft.util.SoundCategory;
 import net.minecraftforge.fml.common.Optional;
 
 public class TileEntityRadar extends TileEntityAbstractEnergyConsumer {
@@ -36,6 +31,8 @@ public class TileEntityRadar extends TileEntityAbstractEnergyConsumer {
 	private boolean isScanning = false;
 	private int scanning_radius = 0;
 	private int scanning_countdown_ticks = 0;
+
+	private boolean soundPlayed = false;
 	
 	public TileEntityRadar() {
 		super();
@@ -79,11 +76,20 @@ public class TileEntityRadar extends TileEntityAbstractEnergyConsumer {
 			}
 		} else {
 			updateBlockState(blockState, BlockRadar.MODE, EnumRadarMode.SCANNING);
+
+			if (!soundPlayed) {
+				System.out.println("Played sound");
+				world.playSound(null, pos, SoundEvents.RADAR_SCAN, SoundCategory.BLOCKS, 4.0F, 1.0F);
+
+				soundPlayed = true;
+			}
+
 			try {
 				scanning_countdown_ticks--;
 				if (scanning_countdown_ticks <= 0) {
 					results = GlobalRegionManager.getRadarEchos(this, scanning_radius);
 					isScanning = false;
+					soundPlayed = false;
 					if (WarpDriveConfig.LOGGING_RADAR) {
 						WarpDrive.logger.info(String.format("%s Scan found %d results in %d radius...",
 						                                    this, results.size(), scanning_radius));

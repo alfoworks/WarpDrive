@@ -26,6 +26,7 @@ public class SoundEvents {
 	public static final SoundEvent COLLISION_LOW;
 	public static final SoundEvent COLLISION_MEDIUM;
 	public static final SoundEvent COLLISION_HIGH;
+	public static final SoundEvent RADAR_SCAN;
 	
 	static {
 		LASER_LOW = registerSound("lowlaser");
@@ -47,6 +48,7 @@ public class SoundEvents {
 		COLLISION_LOW = registerSound("collision_low");
 		COLLISION_MEDIUM = registerSound("collision_medium");
 		COLLISION_HIGH = registerSound("collision_high");
+		RADAR_SCAN = registerSound("radar_scan");
 	}
 	
 	@SuppressWarnings("EmptyMethod")

@@ -2,6 +2,7 @@
   "warp_4s"             : { "category": "block"  , "sounds": [ { "name": "warpdrive:warp_4s"             , "stream": false } ] },
   "warp_10s"            : { "category": "block"  , "sounds": [ { "name": "warpdrive:warp_10s"            , "stream": true  } ] },
   "warp_30s"            : { "category": "block"  , "sounds": [ { "name": "warpdrive:warp_30s"            , "stream": true  } ] },
+  "radar_scan"            : { "category": "block"  , "sounds": [ { "name": "warpdrive:radar_scan"            , "stream": false  } ] },
   "hilaser"             : { "category": "master" , "sounds": [ { "name": "warpdrive:hilaser"             , "stream": false } ] },
   "midlaser"            : { "category": "master" , "sounds": [ { "name": "warpdrive:midlaser"            , "stream": false } ] },
   "lowlaser"            : { "category": "master" , "sounds": [ { "name": "warpdrive:lowlaser"            , "stream": false } ] },
