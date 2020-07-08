@@ -78,7 +78,6 @@ public class TileEntityRadar extends TileEntityAbstractEnergyConsumer {
 			updateBlockState(blockState, BlockRadar.MODE, EnumRadarMode.SCANNING);
 
 			if (!soundPlayed) {
-				System.out.println("Played sound");
 				world.playSound(null, pos, SoundEvents.RADAR_SCAN, SoundCategory.BLOCKS, 4.0F, 1.0F);
 
 				soundPlayed = true;
