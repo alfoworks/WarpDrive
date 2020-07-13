@@ -21,6 +21,7 @@ import net.minecraft.nbt.JsonToNBT;
 import net.minecraft.nbt.NBTException;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.nbt.NBTTagString;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -69,6 +70,9 @@ public class CelestialObject implements Cloneable, IStringSerializable, ICelesti
 	private final RandomCollection<StructureGroup> randomStructures = new RandomCollection<>();
 	
 	public ColorData backgroundColor;
+	public int boxRepeat;
+	public ResourceLocation[] boxTextures;
+	public float boxBrightness;
 	public float baseStarBrightness;
 	public float vanillaStarBrightness;
 	public float opacityCelestialObjects;
@@ -296,6 +300,9 @@ public class CelestialObject implements Cloneable, IStringSerializable, ICelesti
 		}
 		if (listSkyboxes.isEmpty()) {
 			backgroundColor = new ColorData(0.0F      , 0.0F       , 0.0F );
+			boxRepeat = 1;
+			boxTextures = new ResourceLocation[0];
+			boxBrightness = 1.0F;
 			baseStarBrightness = 0.0F;
 			vanillaStarBrightness = 1.0F;
 			opacityCelestialObjects = 1.0F;
@@ -304,12 +311,36 @@ public class CelestialObject implements Cloneable, IStringSerializable, ICelesti
 		} else {
 			final Element elementSkybox = listSkyboxes.get(0);
 			final String locationSkybox = String.format("Celestial object %s skybox 1/1", id);
-			backgroundColor = getColorData(locationSkybox, elementSkybox, "backgroundColor" , 0.0F, 0.0F, 0.0F );
-			baseStarBrightness =  getFloat(locationSkybox, elementSkybox, "starBrightnessBase", 0.0F);
-			vanillaStarBrightness =  getFloat(locationSkybox, elementSkybox, "starBrightnessVanilla", 1.0F);
+			backgroundColor         = getColorData(locationSkybox, elementSkybox, "backgroundColor" , 0.0F, 0.0F, 0.0F );
+			boxBrightness           = getFloat(locationSkybox, elementSkybox, "boxBrightness", 1.0F);
+			baseStarBrightness      = getFloat(locationSkybox, elementSkybox, "starBrightnessBase", 0.0F);
+			vanillaStarBrightness   = getFloat(locationSkybox, elementSkybox, "starBrightnessVanilla", 1.0F);
 			opacityCelestialObjects = getFloat(locationSkybox, elementSkybox, "celestialObjectOpacity", 1.0F);
-			colorFog  = getColorData(locationSkybox, elementSkybox, "fogColor" , 0.7529412F, 0.84705883F, 1.0F );
-			factorFog = getColorData(locationSkybox, elementSkybox, "fogFactor", 0.94F     , 0.94F      , 0.91F);
+			colorFog                = getColorData(locationSkybox, elementSkybox, "fogColor" , 0.7529412F, 0.84705883F, 1.0F );
+			factorFog               = getColorData(locationSkybox, elementSkybox, "fogFactor", 0.94F     , 0.94F      , 0.91F);
+			
+			// get optional boxTextures or repeatingTexture element
+			final List<Element> listBoxTextures = XmlFileManager.getChildrenElementByTagName(elementSkybox, "boxTextures");
+			if (!listBoxTextures.isEmpty()) {
+				boxRepeat = 1;
+				boxTextures = new ResourceLocation[6];
+				boxTextures[0] = new ResourceLocation(listBoxTextures.get(0).getAttribute("bottom"));
+				boxTextures[1] = new ResourceLocation(listBoxTextures.get(0).getAttribute("front"));
+				boxTextures[2] = new ResourceLocation(listBoxTextures.get(0).getAttribute("back"));
+				boxTextures[3] = new ResourceLocation(listBoxTextures.get(0).getAttribute("top"));
+				boxTextures[4] = new ResourceLocation(listBoxTextures.get(0).getAttribute("right"));
+				boxTextures[5] = new ResourceLocation(listBoxTextures.get(0).getAttribute("left"));
+			} else {
+				final List<Element> listRepeatingTexture = XmlFileManager.getChildrenElementByTagName(elementSkybox, "boxTexture");
+				if (!listRepeatingTexture.isEmpty()) {
+					boxRepeat = Commons.clamp(1, 256, Integer.parseInt(listRepeatingTexture.get(0).getAttribute("repeat")));
+					boxTextures = new ResourceLocation[1];
+					boxTextures[0] = new ResourceLocation(listRepeatingTexture.get(0).getAttribute("texture"));
+				} else {
+					boxRepeat = 1;
+					boxTextures = new ResourceLocation[0];
+				}
+			}
 		}
 		
 		// get optional render element(s)
@@ -659,6 +690,17 @@ public class CelestialObject implements Cloneable, IStringSerializable, ICelesti
 		// randomStructures are server side only
 		
 		backgroundColor = new ColorData(tagCompound.getCompoundTag("backgroundColor"));
+		boxRepeat = tagCompound.getInteger("boxRepeat");
+		
+		final NBTTagList tagListBoxTextures = tagCompound.getTagList("boxTextures", NBT.TAG_STRING);
+		final int countBoxTextures = tagListBoxTextures.tagCount();
+		boxTextures = new ResourceLocation[countBoxTextures];
+		for (int indexBoxTexture = 0; indexBoxTexture < countBoxTextures; indexBoxTexture++) {
+			final String texture = tagListBoxTextures.getStringTagAt(indexBoxTexture);
+			boxTextures[indexBoxTexture] = new ResourceLocation(texture);
+		}
+		
+		boxBrightness = tagCompound.getFloat("boxBrightness");
 		baseStarBrightness = tagCompound.getFloat("baseStarBrightness");
 		vanillaStarBrightness = tagCompound.getFloat("vanillaStarBrightness");
 		opacityCelestialObjects = tagCompound.getFloat("opacityCelestialObjects");
@@ -710,6 +752,15 @@ public class CelestialObject implements Cloneable, IStringSerializable, ICelesti
 		// randomStructures are server side only
 		
 		tagCompound.setTag("backgroundColor", backgroundColor.writeToNBT(new NBTTagCompound()));
+		tagCompound.setInteger("boxRepeat", boxRepeat);
+		
+		final NBTTagList nbtTagListBoxTextures = new NBTTagList();
+		for (final ResourceLocation resourceLocation : boxTextures) {
+			nbtTagListBoxTextures.appendTag(new NBTTagString(resourceLocation.toString()));
+		}
+		tagCompound.setTag("boxTextures", nbtTagListBoxTextures);
+		
+		tagCompound.setFloat("boxBrightness", boxBrightness);
 		tagCompound.setFloat("baseStarBrightness", baseStarBrightness);
 		tagCompound.setFloat("vanillaStarBrightness", vanillaStarBrightness);
 		tagCompound.setFloat("opacityCelestialObjects", opacityCelestialObjects);
