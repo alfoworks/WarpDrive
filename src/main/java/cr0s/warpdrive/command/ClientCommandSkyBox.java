@@ -4,6 +4,7 @@ import cr0s.warpdrive.render.RenderSpaceSky;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.client.IClientCommand;
 
 public class ClientCommandSkyBox extends CommandBase implements IClientCommand {
@@ -28,7 +29,17 @@ public class ClientCommandSkyBox extends CommandBase implements IClientCommand {
             return;
         }
 
-        RenderSpaceSky.getInstance().skyRendererIndex = Integer.parseInt(args[0]);
+        int i = Integer.parseInt(args[0]);
+
+        if (i > RenderSpaceSky.getInstance().renderers.size() - 1) {
+            sender.sendMessage(new TextComponentString("Invalid ID!"));
+
+            return;
+        }
+
+        RenderSpaceSky.getInstance().setRenderer(i);
+
+        sender.sendMessage(new TextComponentString("Skybox is now " + RenderSpaceSky.getInstance().renderers.get(i).getName()));
     }
 
     @Override

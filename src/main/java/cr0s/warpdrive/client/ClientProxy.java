@@ -26,6 +26,7 @@ import javax.annotation.Nonnull;
 import java.util.Collection;
 
 import cr0s.warpdrive.render.skybox.CustomSkyBoxRenderer;
+import cr0s.warpdrive.render.skybox.DefaultSkyBoxRenderer;
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
@@ -107,10 +108,10 @@ public class ClientProxy extends CommonProxy {
 		
 		MinecraftForge.EVENT_BUS.register(new ClientCameraHandler());
 
-		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("blue", "Blue"));
-		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("purple", "Purple"));
-		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("red", "Red"));
-		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("pureBlack", "Pure Black"));
+		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("alfo", "ALFO:MINE"));
+		RenderSpaceSky.getInstance().renderers.add(new DefaultSkyBoxRenderer());
+
+		RenderSpaceSky.getInstance().currentRenderer = RenderSpaceSky.getInstance().renderers.get(0);
 
 		ClientCommandHandler.instance.registerCommand(new ClientCommandSkyBox());
 	}

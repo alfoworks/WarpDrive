@@ -36,13 +36,24 @@ public class RenderSpaceSky extends IRenderHandler {
 	private static RenderSpaceSky INSTANCE = null;
 
 	public List<ISkyBoxRenderer> renderers = new ArrayList<>();
-	public int skyRendererIndex = 0;
+	public ISkyBoxRenderer currentRenderer;
+	private ISkyBoxRenderer nextRenderer;
+
+	private int anim = 0;
+	private long timeSinceAnimStarted;
 	
 	public static RenderSpaceSky getInstance() {
 		if (INSTANCE == null) {
 			INSTANCE = new RenderSpaceSky();
 		}
 		return INSTANCE;
+	}
+
+	public void setRenderer(int i) {
+		nextRenderer = renderers.get(i);
+
+		anim = -1;
+		timeSinceAnimStarted = System.currentTimeMillis();
 	}
 	
 	@Override
@@ -60,7 +71,29 @@ public class RenderSpaceSky extends IRenderHandler {
 		GlStateManager.blendFunc(SourceFactor.SRC_ALPHA, DestFactor.ONE);
 		GlStateManager.disableAlpha();
 
-		renderers.get(skyRendererIndex).render(tessellator, mc, 255);
+		float a = 255;
+
+		if (timeSinceAnimStarted != -1) {
+			if (anim == 1) {
+				a = Math.min(System.currentTimeMillis() - timeSinceAnimStarted, 255);
+
+				if (a == 255) {
+					timeSinceAnimStarted = -1;
+					anim = 0;
+				}
+			} else if (anim == -1) {
+				a = Math.max(0, 255 - (System.currentTimeMillis() - timeSinceAnimStarted));
+
+				if (a == 0) {
+					timeSinceAnimStarted = System.currentTimeMillis();
+					anim = 1;
+					currentRenderer = nextRenderer;
+					nextRenderer = null;
+				}
+			}
+		}
+
+		currentRenderer.render(tessellator, mc, world, a, partialTicks);
 
 		// enable texture with alpha blending
 		GlStateManager.enableTexture2D();
