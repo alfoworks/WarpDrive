@@ -37,4 +37,9 @@ public class CustomSkyBoxRenderer implements ISkyBoxRenderer {
     public void render(Tessellator tessellator, Minecraft mc, WorldClient world, float opacity, float partialTicks) {
         RenderCommons.renderSkyBox(tessellator, locations, opacity / 255, 1);
     }
+    
+    @Override
+    public ResourceLocation getPreview() {
+        return locations[0];
+    }
 }

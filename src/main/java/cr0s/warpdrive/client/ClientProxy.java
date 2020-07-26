@@ -109,6 +109,12 @@ public class ClientProxy extends CommonProxy {
 		MinecraftForge.EVENT_BUS.register(new ClientCameraHandler());
 
 		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("alfo", "ALFO:MINE"));
+		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("blue_pink", "Blue Pink"));
+		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("green_purple", "Green Purple"));
+		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("large_brown", "Large Brown"));
+		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("large_yellow", "Large Yellow"));
+		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("small_blue", "Small Blue"));
+		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("small_purple", "Small Purple"));
 		RenderSpaceSky.getInstance().renderers.add(new DefaultSkyBoxRenderer());
 
 		RenderSpaceSky.getInstance().currentRenderer = RenderSpaceSky.getInstance().renderers.get(0);

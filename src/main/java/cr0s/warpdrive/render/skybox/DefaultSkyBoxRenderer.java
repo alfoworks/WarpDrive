@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.GLAllocation;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import javax.annotation.Nonnull;
@@ -41,7 +42,12 @@ public class DefaultSkyBoxRenderer implements ISkyBoxRenderer {
             renderStars_cached((float) opacity / 255);
         }
     }
-
+    
+    @Override
+    public ResourceLocation getPreview() {
+        return new ResourceLocation("");
+    }
+    
     private static int getStarColorRGB(@Nonnull final Random rand) {
         final double colorType = rand.nextDouble();
         final float hue;
