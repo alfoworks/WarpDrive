@@ -352,11 +352,11 @@ public class Dictionary {
 			config.get("entity_tags", "minecraft:arrow"                        , "NoMass NonLivingTarget").getString();
 			
 			config.get("entity_tags", "ic2:carbon_boat"                        , "NoMass NonLivingTarget").getString(); // IC2 Experimental
-			config.get("entity_tags", "ic2:carbonboat"                        , "NoMass NonLivingTarget").getString(); // IC2 Classic
+			config.get("entity_tags", "ic2:carbonboat"                         , "NoMass NonLivingTarget").getString(); // IC2 Classic
 			config.get("entity_tags", "ic2:rubber_boat"                        , "NoMass NonLivingTarget").getString(); // IC2 Experimental
-			config.get("entity_tags", "ic2:rubberboat"                        , "NoMass NonLivingTarget").getString(); // IC2 Classic
+			config.get("entity_tags", "ic2:rubberboat"                         , "NoMass NonLivingTarget").getString(); // IC2 Classic
 			config.get("entity_tags", "ic2:electric_boat"                      , "NoMass NonLivingTarget").getString(); // IC2 Experimental
-			config.get("entity_tags", "ic2:electricboat"                      , "NoMass NonLivingTarget").getString(); // IC2 Classic
+			config.get("entity_tags", "ic2:electricboat"                       , "NoMass NonLivingTarget").getString(); // IC2 Classic
 			config.get("entity_tags", "ic2:nuke"                               , "NoMass NonLivingTarget").getString(); // IC2 Experimental & Classic
 			config.get("entity_tags", "ic2:itnt"                               , "NoMass NonLivingTarget").getString(); // IC2 Experimental & Classic
 			config.get("entity_tags", "ic2:sticky_dynamite"                    , "NoMass NonLivingTarget").getString(); // IC2 Experimental
@@ -377,6 +377,21 @@ public class Dictionary {
 			config.get("entity_tags", "minecraft:zombie_villager"              , "LivingWithoutAir").getString();
 			
 			// config.get("entity_tags", "BuildCraft|Robotics.bcRobot"                        , "LivingWithoutAir").getString(); @TODO MC1.12 BuildCraft robots not implemented yet
+			config.get("entity_tags", "extraplanets:extraplanets.evolvedmagmacubeboss"  , "LivingWithoutAir").getString();
+			config.get("entity_tags", "extraplanets:extraplanets.evolvedfirebatboss"    , "LivingWithoutAir").getString();
+			config.get("entity_tags", "extraplanets:extraplanets.evolvedghastboss"      , "LivingWithoutAir").getString();
+			config.get("entity_tags", "extraplanets:extraplanets.evolvediceslimeboss"   , "LivingWithoutAir").getString();
+			config.get("entity_tags", "extraplanets:extraplanets.evolvedsnowmanboss"    , "LivingWithoutAir").getString();
+			config.get("entity_tags", "extraplanets:extraplanets.evolvedspacemanboss"   , "LivingWithoutAir").getString();
+			config.get("entity_tags", "extraplanets:extraplanets.evolvedgiantzombieboss", "LivingWithoutAir").getString();
+			config.get("entity_tags", "galacticraftcore:evolved_zombie"        , "LivingWithoutAir").getString();
+			config.get("entity_tags", "galacticraftcore:evolved_spider"        , "LivingWithoutAir").getString();
+			config.get("entity_tags", "galacticraftcore:evolved_creeper"       , "LivingWithoutAir").getString();
+			config.get("entity_tags", "galacticraftcore:evolved_skeleton"      , "LivingWithoutAir").getString();
+			config.get("entity_tags", "galacticraftcore:evolved_skeleton_boss" , "LivingWithoutAir").getString();
+			config.get("entity_tags", "galacticraftcore:evolved_enderman"      , "LivingWithoutAir").getString();
+			config.get("entity_tags", "galacticraftcore:evolved_witch"         , "LivingWithoutAir").getString();
+			config.get("entity_tags", "galacticraftplanets:creeper_boss"       , "LivingWithoutAir").getString();
 			config.get("entity_tags", "icbmclassic:skeleton.xmas.elf"          , "LivingWithoutAir").getString();
 			config.get("entity_tags", "icbmclassic:skeleton.xmas.snowman"      , "LivingWithoutAir").getString();
 			config.get("entity_tags", "icbmclassic:skeleton.xmas.boss"         , "LivingWithoutAir").getString();
