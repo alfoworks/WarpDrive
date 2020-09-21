@@ -1,5 +1,6 @@
 package cr0s.warpdrive.command;
 
+import cr0s.warpdrive.client.SkyBoxManager;
 import cr0s.warpdrive.render.RenderSpaceSky;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
@@ -29,17 +30,16 @@ public class ClientCommandSkyBox extends CommandBase implements IClientCommand {
             return;
         }
 
-        int i = Integer.parseInt(args[0]);
-
-        if (i > RenderSpaceSky.getInstance().renderers.size() - 1) {
+        if (!SkyBoxManager.skyboxes.containsKey(args[0])) {
             sender.sendMessage(new TextComponentString("Invalid ID!"));
 
             return;
         }
 
-        RenderSpaceSky.getInstance().setRenderer(i);
+        SkyBoxManager.setSkyBox(args[0]);
+        SkyBoxManager.saveSelectedSkyBox(args[0]);
 
-        sender.sendMessage(new TextComponentString("Skybox is now " + RenderSpaceSky.getInstance().renderers.get(i).getName()));
+        sender.sendMessage(new TextComponentString("Skybox is now " + SkyBoxManager.skyboxes.get(args[0]).getName()));
     }
 
     @Override

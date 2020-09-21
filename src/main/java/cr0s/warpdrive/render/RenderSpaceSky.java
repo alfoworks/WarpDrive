@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import cr0s.warpdrive.world.SpaceWorldProvider;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.BufferBuilder;
@@ -35,7 +36,6 @@ public class RenderSpaceSky extends IRenderHandler {
 	
 	private static RenderSpaceSky INSTANCE = null;
 
-	public List<ISkyBoxRenderer> renderers = new ArrayList<>();
 	public ISkyBoxRenderer currentRenderer;
 	private ISkyBoxRenderer nextRenderer;
 
@@ -49,11 +49,15 @@ public class RenderSpaceSky extends IRenderHandler {
 		return INSTANCE;
 	}
 
-	public void setRenderer(int i) {
-		nextRenderer = renderers.get(i);
+	public void setRenderer(ISkyBoxRenderer renderer) {
+		if (currentRenderer == null) {
+			currentRenderer = renderer;
+		} else {
+			nextRenderer = renderer;
 
-		anim = -1;
-		timeSinceAnimStarted = System.currentTimeMillis();
+			anim = -1;
+			timeSinceAnimStarted = System.currentTimeMillis();
+		}
 	}
 	
 	@Override

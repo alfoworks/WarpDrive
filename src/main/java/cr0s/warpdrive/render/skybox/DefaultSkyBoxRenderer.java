@@ -5,8 +5,11 @@ import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GLAllocation;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.GlStateManager.DestFactor;
+import net.minecraft.client.renderer.GlStateManager.SourceFactor;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
@@ -15,37 +18,29 @@ import java.awt.*;
 import java.util.Random;
 
 public class DefaultSkyBoxRenderer implements ISkyBoxRenderer {
-
-    private static final float ALPHA_TOLERANCE = 1.0F / 256.0F;
-    private static float starBrightness = 0.0F;
+    
     private static final int callListRoot = GLAllocation.generateDisplayLists(3);
     private static final int callListStars = callListRoot;
 
     @Override
     public String getName() {
-        return "WarpDrive Default";
+        return I18n.format("warpdrive.skybox.names.default");
+    }
+
+    @Override
+    public String getID() {
+        return "warpdrive_default";
     }
 
     @Override
     public void render(Tessellator tessellator, Minecraft mc, WorldClient world, float opacity, float partialTicks) {
-        final float alphaBase = 1.0F; // - world.getRainStrength(partialTicks);
-
-        // draw stars
-        GlStateManager.enableBlend();
-        GlStateManager.blendFunc(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE);
-        GlStateManager.disableAlpha();
-        float starBrightness = 0.2F;
-        if (world.provider != null) {
-            starBrightness = world.getStarBrightness(partialTicks);
-        }
-        if (starBrightness > 0.0F) {
-            renderStars_cached((float) opacity / 255);
-        }
+        renderStars_cached(opacity); //TODO fix strange flickering. Not gonna fuck with that right now.
     }
     
+    @Nonnull
     @Override
     public ResourceLocation getPreview() {
-        return new ResourceLocation("");
+        return new ResourceLocation("warpdrive", "textures/celestial/skybox_preview_default.png");
     }
     
     private static int getStarColorRGB(@Nonnull final Random rand) {
@@ -139,11 +134,10 @@ public class DefaultSkyBoxRenderer implements ISkyBoxRenderer {
 
             // colorization
             final int rgb = getStarColorRGB(rand);
-            final float fRed   = brightness * ((rgb >> 16) & 0xFF) / 255.0F;
-            final float fGreen = brightness * ((rgb >> 8) & 0xFF) / 255.0F;
-            final float fBlue  = brightness * (rgb & 0xFF) / 255.0F;
-            final float fAlpha = 1.0F;
-
+            final float fRed   = ((rgb >> 16) & 0xFF) / 255.0F;
+            final float fGreen = ((rgb >> 8) & 0xFF) / 255.0F;
+            final float fBlue  = (rgb & 0xFF) / 255.0F;
+    
             // pre-computations
             final double sinH = Math.sin(angleH);
             final double cosH = Math.cos(angleH);
@@ -163,7 +157,7 @@ public class DefaultSkyBoxRenderer implements ISkyBoxRenderer {
                 final double valD = valZero * sinV - valV * cosV;
                 final double x1 = valD * sinH - valH * cosH;
                 final double z1 = valH * sinH + valD * cosH;
-                vertexBuffer.pos(x0 + x1, y0 + y1, z0 + z1).color(fRed, fGreen, fBlue, fAlpha).endVertex();
+                vertexBuffer.pos(x0 + x1, y0 + y1, z0 + z1).color(fRed, fGreen, fBlue, brightness / 255.0F).endVertex();
             }
             tessellator.draw();
         }
@@ -171,14 +165,12 @@ public class DefaultSkyBoxRenderer implements ISkyBoxRenderer {
     }
 
     private void renderStars_cached(final float brightness) {
-        if (Math.abs(starBrightness - brightness) > ALPHA_TOLERANCE) {
-            starBrightness = brightness;
-            GlStateManager.pushMatrix();
-            GlStateManager.glNewList(callListStars, GL11.GL_COMPILE);
-            renderStars_direct(brightness);
-            GlStateManager.glEndList();
-            GlStateManager.popMatrix();
-        }
+        GlStateManager.pushMatrix();
+        GlStateManager.glNewList(callListStars, GL11.GL_COMPILE);
+        renderStars_direct(brightness);
+        GlStateManager.glEndList();
+        GlStateManager.popMatrix();
+        
         GlStateManager.callList(callListStars);
     }
 }

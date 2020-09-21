@@ -107,7 +107,7 @@ public class WarpDriveConfig {
 	private static final boolean unused = false; // TODO
 	
 	private static String          stringConfigDirectory;
-	private static File            fileConfigDirectory;
+	public static File             fileConfigDirectory;
 	private static DocumentBuilder xmlDocumentBuilder;
 	private static final String[]  defaultXML_fillerSets = {
 			"fillerSets-default.xml",
@@ -574,6 +574,8 @@ public class WarpDriveConfig {
 	public static int              CHUNK_LOADER_MAX_ENERGY_STORED = 1000000;
 	public static int              CHUNK_LOADER_MAX_RADIUS = 2;
 	public static int              CHUNK_LOADER_ENERGY_PER_CHUNK = 8;
+
+	public static String 		   SKYBOX_ID = "";
 	
 	// Hull
 	public static float[]          HULL_HARDNESS = { 666666.0F, 25.0F, 50.0F, 80.0F };
@@ -593,7 +595,14 @@ public class WarpDriveConfig {
 	
 	// Plasma torch
 	public static int[]            PLASMA_TORCH_CAPACITY_BY_TIER = { 16000, 200, 400, 800 };
-	
+
+	public static void setSkyboxId(String id) {
+		Configuration config = new Configuration(new File(fileConfigDirectory, "config.yml"));
+		config.load();
+		config.get("alfo_skybox", "skybox_id", SKYBOX_ID).set(id);
+		config.save();
+	}
+
 	@Nonnull
 	public static Block getBlockOrFire(@Nonnull final String registryName) {
 		final ResourceLocation resourceLocation = new ResourceLocation(registryName);
@@ -1410,7 +1419,8 @@ public class WarpDriveConfig {
 				config.get("chunk_loader", "max_radius", CHUNK_LOADER_MAX_RADIUS, "Maximum radius when loading a square shape, measured in chunks. A linear shape can be up to 1 chunk wide by (radius + 1 + radius) ^ 2 chunks long.").getInt());
 		CHUNK_LOADER_ENERGY_PER_CHUNK = Commons.clamp(1, 100,
 				config.get("chunk_loader", "energy_per_chunk", CHUNK_LOADER_ENERGY_PER_CHUNK, "Energy consumed per chunk loaded").getInt());
-		
+
+		SKYBOX_ID = config.get("alfo_skybox", "skybox_id", SKYBOX_ID, "Skybox ID.").getString();
 		
 		// Particles accelerator
 		ACCELERATOR_ENABLE = config.get("accelerator", "enable", ACCELERATOR_ENABLE, "Enable accelerator blocks. Requires a compatible server, as it won't work in single player").getBoolean(false);

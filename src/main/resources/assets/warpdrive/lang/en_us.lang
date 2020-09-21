@@ -1006,3 +1006,8 @@ warpdrive.world_border.in_range=Proximity alert: world border is only %1$d m awa
 warpdrive.world_border.outside=You're %1$d m outside the world border...
 warpdrive.world_border.portal_denied=Portal opening cancelled to prevent a certain death!
 warpdrive.world_border.reached=You've reached the world border...
+
+warpdrive.skybox.names.alfo=ALFO:MINE
+warpdrive.skybox.names.default=Classic
+warpdrive.skybox.names.old=Old
+warpdrive.skybox.names.milkyway=Milky Way

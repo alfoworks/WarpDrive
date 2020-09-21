@@ -6,6 +6,7 @@ import cr0s.warpdrive.api.IBlockBase;
 import cr0s.warpdrive.api.IItemBase;
 import cr0s.warpdrive.block.breathing.BlockColorAirShield;
 import cr0s.warpdrive.command.ClientCommandSkyBox;
+import cr0s.warpdrive.config.WarpDriveConfig;
 import cr0s.warpdrive.entity.EntityNPC;
 import cr0s.warpdrive.entity.EntityOfflineAvatar;
 import cr0s.warpdrive.entity.EntityParticleBunch;
@@ -23,10 +24,12 @@ import cr0s.warpdrive.render.*;
 
 import javax.annotation.Nonnull;
 
+import java.io.File;
 import java.util.Collection;
 
 import cr0s.warpdrive.render.skybox.CustomSkyBoxRenderer;
 import cr0s.warpdrive.render.skybox.DefaultSkyBoxRenderer;
+import cr0s.warpdrive.render.skybox.OldSkyBoxRenderer;
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
@@ -34,6 +37,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -44,6 +48,7 @@ import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
@@ -108,16 +113,13 @@ public class ClientProxy extends CommonProxy {
 		
 		MinecraftForge.EVENT_BUS.register(new ClientCameraHandler());
 
-		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("alfo", "ALFO:MINE"));
-		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("blue_pink", "Blue Pink"));
-		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("green_purple", "Green Purple"));
-		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("large_brown", "Large Brown"));
-		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("large_yellow", "Large Yellow"));
-		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("small_blue", "Small Blue"));
-		RenderSpaceSky.getInstance().renderers.add(new CustomSkyBoxRenderer("small_purple", "Small Purple"));
-		RenderSpaceSky.getInstance().renderers.add(new DefaultSkyBoxRenderer());
+		SkyBoxManager.addSkyBox(new CustomSkyBoxRenderer("alfo", I18n.format("warpdrive.skybox.names.alfo")));
+		SkyBoxManager.addSkyBox(new CustomSkyBoxRenderer("milkyway", I18n.format("warpdrive.skybox.names.milkyway")));
+		SkyBoxManager.addSkyBox(new CustomSkyBoxRenderer("debug", "Debug"));
+		SkyBoxManager.addSkyBox(new DefaultSkyBoxRenderer());
+		SkyBoxManager.addSkyBox(new OldSkyBoxRenderer());
 
-		RenderSpaceSky.getInstance().currentRenderer = RenderSpaceSky.getInstance().renderers.get(0);
+		SkyBoxManager.setSkyBox(WarpDriveConfig.SKYBOX_ID);
 
 		ClientCommandHandler.instance.registerCommand(new ClientCommandSkyBox());
 	}
