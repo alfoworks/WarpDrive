@@ -22,7 +22,19 @@ import javax.annotation.Nonnull;
 import java.util.List;
 
 public class HyperSpaceWorldProvider extends AbstractWorldProvider {
-	
+
+	private CelestialBody body = new CelestialBody("Space") {
+		@Override
+		public int getID() {
+			return -101;
+		}
+
+		@Override
+		public String getUnlocalizedNamePrefix() {
+			return "";
+		}
+	};
+
 	public HyperSpaceWorldProvider() {
 		super();
 		
@@ -212,7 +224,7 @@ public class HyperSpaceWorldProvider extends AbstractWorldProvider {
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return null;
+		return body;
 	}
 
 	@Override
